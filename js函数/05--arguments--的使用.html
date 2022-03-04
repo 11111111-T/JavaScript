@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>arguments--的使用</title>
+
+		<script type="text/javascript">
+			// arguments的使用  只有函数才有arguments对象  而且是每个函数都内置好了这个arguments
+			function fn() {
+				/*
+			console.log(arguments);  //里面存储了所有传递过来的实参
+			console.log(arguments.length);  // 长度为3
+			console.log(arguments[1]);  // 找到索引号1对应的数
+		
+			console.log(arguments[3]);  // 找到索引号3对应的数
+			*/
+				//我们可以按照数组的方式遍历 arguments
+				for (var i = 0; i < arguments.length; i++) {
+					console.log(arguments[i]);
+				}
+			}
+			fn(1, 2, 3);
+			fn(1, 2, 3, 4, 5, 6, 7)
+			
+			// 伪数组 并不是真正意义上的数组
+			// 1.具有数组的length 属性
+			// 2.按照索引的方式进行存储的
+			// 3.他没有真正数组的一些方法 pop() push() 等等
+
+
+			console.log('*******************案例::arguments 求最大值**********************');
+
+			function getMax() { //arguments 
+				//定义新的变量,   arguments的第0位开始
+				var max = arguments[0];
+
+				for (var i = 0; i < arguments.length; i++) {
+					//最大值的核心算法
+					if (max < arguments[i]) {
+						max = arguments[i]
+					}
+				}
+				// 返回值  定义的新变量
+				return max;
+			}
+			console.log(getMax(1, 2, 3));
+			console.log(getMax(1, 2, 30));
+			console.log(getMax(1, 20, 3));
+			console.log(getMax(10, 2, 3));
+
+			console.log('*******************案例::翻转 **********************');
+
+			// 利用函数翻转任意按钮 reverse 翻转
+			function reverse(arr) {
+				// 定义个新的数组;
+				var newArr = [];
+				// 翻转的核心算法
+				for (var i = arr.length - 1; i >= 0; i--) {
+					//从旧数组里面获得数传给新数组,
+					newArr[newArr.length] = arr[i]
+				}
+				return newArr
+			}
+			newArr = reverse([1, 2, 3, 4, 5]);
+			console.log(newArr);
+
+
+
+			console.log('*******************案例::函数,排序冒泡 **********************');
+
+			// 排序 sort
+
+			function getMao(arr) {
+				//冒泡排序法
+				for (var i = 0; i < arr.length - 1; i++) { //外层循环管趟数
+					for (j = 0; j < arr.length - i - 1; j++) { //里面的循环管  每一趟交换次数
+						//内部交换2个变量的值,前一个和后面一个数组元素相比较
+
+						// 从大到小  核心算法
+						// if(array[j]>array[j+1]){
+
+						// 从小打大  核心算法
+						if (arr[j] > arr[j + 1]) {
+							var temp = arr[j]
+							arr[j] = arr[j + 1]
+							arr[j + 1] = temp;
+						}
+					}
+				}
+				return arr
+			}
+
+			var arr = getMao([10, 2, 16, 30, 8, 15]);
+			console.log(arr);
+
+
+			var arr1 = getMao([10, 200, 16, 30, 8, 15]);
+			console.log(arr1);
+
+			var arr1 = getMao([1000, 10, 200, 160, 30, 800, 15]);
+			console.log(arr1);
+
+			console.log('*******************案例::函数,判断闰年 **********************');
+
+
+			function year(nian) {
+				//闰年我们返回true 否则 返回 flase
+				var flag = false;
+				if (nian % 4 == 0 && nian % 100 != 0 || nian % 400 == 0) {
+
+					flag = true;
+
+				}
+
+				return flag;
+
+			}
+			console.log(year(2000));
+			console.log(year(2001));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

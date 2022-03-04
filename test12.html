@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!-- .甲乙丙丁加工零件，加工的总数是370， 如果甲加工的零件数多10，
+			如果乙加工的零件数少20，
+			如果丙加工的零件数乘以2，
+			如果丁加工的零件数除以2，四个人的加工数量相等，
+			求甲乙丙丁各自加工多少个零件 
+			
+			思路：   相等时 零件数 i  
+			 甲  i-10
+			 乙  i+20
+			 丙  i/2
+			 丁  i*2
+			
+			
+		-->
+		<script type="text/javascript">
+			
+			for (var i = 1; i < 370; i++) {
+				
+				if(((i-10)+(i+20)+(i/2)+(i*2))==370){
+					
+					console.log("甲加工零件的个数："+(i-10));
+					console.log("乙加工零件的个数："+(i+20));
+					console.log("丙加工零件的个数："+(i/2));
+					console.log("丁加工零件的个数："+(i*2));
+					break; //结束循环  提高代码效率
+				}
+			}
+		</script>
+	</body>
+</html>

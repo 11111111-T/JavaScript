@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>作用域链</title>
+		<script type="text/javascript">
+			// 作用域链			内部函数访问外部函数的变量,  采取的是链式查找的方式 来决定去去哪个值
+			
+			// 就近原则 谁离的近执行谁	
+			var num = 10;
+
+			function fn() { //外部函数
+
+				var num = 30;
+
+				function fn1() { //内部函数 
+				var num =40;
+					console.log(num);
+				}
+				fn1()
+			}
+			fn()
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

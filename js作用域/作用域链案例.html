@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>作用域链案例</title>
+		<script type="text/javascript">
+			
+			
+			function fn(){
+				 var num=999;
+				 function fn1(){
+					 console.log(num);
+				 }
+				 fn1();
+			}
+			var num=100;
+			fn();
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

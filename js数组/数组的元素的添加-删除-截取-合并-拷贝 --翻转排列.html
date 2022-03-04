@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script type="text/javascript">
+			/*
+	反转元素（最前的排到最后、最后的排到最前），返回数组地址
+			// 案例1: 翻转元素    数组名.reverse(); 
+			*/
+			var arr = ['孔明', '诸葛', '卧龙岗']
+			console.log(arr);
+			arr.reverse()
+
+			console.log(arr);
+
+			console.log('****************方法2*************');
+
+			var arr1 = ['孔明', '诸葛', '卧龙岗']
+			console.log(arr1);
+			var arr2 = [];
+			for (var i = arr1.length - 1; i >= 0; i--) {
+
+				arr2[arr2.length] = arr1[i];
+			}
+			console.log(arr2);
+
+
+
+			console.log('****************.push()*************');
+			/*
+			案例1.
+			一个或多个新元素添加到数组结尾，并返回数组新长度
+			
+			​		数组名. push();
+			*/
+			var array = [1, 2, 3, 4, 5];
+
+			array.push(6, 100);
+
+			console.log(array);
+
+
+
+
+
+			console.log('****************.unshift（)*************');
+			/*
+			2.将一个或多个新元素添加到数组开始，数组中的元素自动后移，返回数组新长度
+			
+			​		数组名.unshift（);
+			*/
+			var array1 = [1, 2, 3, 4, 5];
+
+			array1.unshift(12, 100);
+
+			console.log(array1);
+
+			console.log('****************.splice(,,,)*************');
+			/*
+		   案例
+		   3.将一个或多个新元素插入到数组的指定位置，插入位置的元素自动后移，返回删除后的元素。
+		   
+		   ​		数组名.splice（start，deleteNum，insert);
+				插入元素到数组指定的位置
+				第一个参数 start  从哪里开始
+				第二个参数 delNum 删除元素的个数
+				第三个参数 insert  插入的新元素
+				第四....第n都是往后加插入新元素
+		   */
+
+			var array2 = [1, 2, 3, 4, 5, 6, 7, 8, 10];
+			console.log(array2);
+
+			// array2.splice(1, 4,100,20);//从索引号1开始删除4个元素再加上100这个元素,
+			// array2.splice(1,4);//从索引号1开始删除4个元素
+			array2.splice(3); //从索引号3开始删除后面的元素
+			console.log(array2); //获得 [1, 100, 6, 7, 8, 10]
+
+
+
+
+
+			console.log('****************.pop()*************');
+			/*
+			案例
+			4.移除最后一个元素并返回该元素值
+			​		数组名.pop();
+			*/
+			var array3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+			var abc = array3.pop()
+			console.log(array3);
+			console.log(abc);
+
+
+
+
+			console.log('****************.shift()*************');
+			/*
+			案例:
+			5.移除最前一个元素并返回该元素值，数组中元素自动前移
+			​		数组名.shift();
+			*/
+
+			var array4 = [1, 2, 3, 4, 5, 6, 7, 8, 10];
+			var abc1 = array4.shift()
+			console.log(array4);
+			console.log(abc1);
+
+
+
+			console.log('****************.slice()*************');
+			/*
+			案例:
+			 7.以数组的形式返回数组的一部分，注意`不包括 end `对应的元素，
+			 如果省略 end 将复制start 之后的所有元素 
+			
+			​		数组名.slice(start, [end]);
+			
+			start表示从某个索引号开始复制,
+			end表示到某个索引号结束复制,
+			*/
+
+			var array5 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+			var abc2 = array5.slice(1,6);
+			console.log(array5.toString());
+			console.log(abc2);
+
+
+			console.log('*******这是指向*********.concat()*************');
+			/*
+		   案例:
+		   8.将多个数组（也可以是字符串，或者是数组和字符串的混合）连接为一个数组，返回连接好的新的数组
+		   
+			可以连接多个数组
+		   
+		   ​		数组名.concat([item1[, item2[, . . . [,itemN]]]]);
+		   */
+
+			var array6 = [10, '九', 8, '七', 6, '五', 4, '三', 2, '一'];
+			// var abc3 = array6.concat(array6, [array5, array4]); //包含并连接上几个案例中的数组,成为新的数组
+
+			// 这是ES6中的方法  企业开发常用
+			var abc3 = [...array6, ...array5]
+
+			console.log(array6);
+			console.log(abc3);
+
+
+
+
+			console.log('*********这是拷贝*******.concat()*************');
+
+
+			/*
+			案例:
+			
+			9.返回数组的拷贝数组，注意是一个新的数组，不是指向
+			
+			​		数组名.concat();
+			
+			
+			var array4 = [10,11,13,14]
+			var a = array4.concat()
+			console.log(array4)
+			console.log(a)
+			*/
+			var array7 = [10, '九', 8, '七', 6, '五', 4, '三', 2, '一'];
+			var abc4 = array7.concat(); //拷贝
+			console.log(array7);
+			console.log(abc4);
+
+
+
+
+			console.log('***********这是针对个位数的方法*****.sort()*************');
+			/*
+			案例:
+			
+			**对数组元素按从小到大排序，返回数组地址**
+			
+			数组名.sort(); 
+			*/
+
+			// 这是针对个位数的方法
+			var array8 = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+			console.log(array8); //  [1, 2, 3, 4, 5, 6, 7, 8, 9]
+			var abc5 = array8.sort();
+			console.log(abc5); //  [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+
+			console.log('***********这是针对多位数的方法*****.sort()*************');
+			// 这是针对多位数的方法
+
+			var array9 = [90, 888, 7777, 6, 5, 4, 3, 2, 1];
+			console.log(array9);
+			var abc6 = array9.sort(function(a, b) {
+				return a - b
+			})
+			console.log(abc6);
+
+
+			console.log('***********这是数组的翻转*****.reverse()*************');
+			/*
+			数组名.reverse()
+			会修改原有的数组
+			
+			*/
+			var array10 = [1, 2, 3, 4, 5, 6, 7]
+			console.log(array10);
+			var kk = array10.reverse()
+
+			console.log(kk);
+
+
+			console.log('***********这是数组查找元素的位置*****.indexOf()*************');
+			[0, 1, 2, 3, 4, 5, 6]
+			var array11 = [1, 2, 3, 4, 5, 6, 7]
+
+
+			// 如果找到了 元素就会返回元素的位置
+			// 如果没找到 就会返回一个 -1
+			// 注意点 indexOf 默认从左往右找 找到就立即停止查找
+			var a = array11.indexOf(3) //2
+			console.log(array11);
+			console.log(a);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

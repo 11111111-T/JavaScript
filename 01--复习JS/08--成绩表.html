@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>成绩表</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var fen = parseInt(prompt('请输入分数'))
+
+
+			// if (fen < 60) {
+			// 	console.log('E');
+			// } else if (fen >= 60 && fen < 70) {
+			// 	console.log('D');
+			// } else if (fen >= 70 && fen < 80) {
+			// 	console.log('C');
+			// } else if (fen >= 80 && fen < 90) {
+			// 	console.log('B');
+			// } else {
+			// 	console.log('A');
+			// }
+
+			switch (true) {
+				case fen < 60:
+					console.log('E');
+					break;
+				case fen >= 60 && fen < 70:
+					console.log('D');
+					break;
+				case fen >= 70 && fen < 80:
+					console.log('C');
+					break;
+				case fen >= 80 && fen < 90:
+					console.log('B');
+					break;
+				default:
+					console.log('A');
+					break;
+			}
+			
+			// switch 语句的参数之所以是 true，就是因为每
+			// 个条件的表达式都会返回布尔值。条件的表达式分别被求值，直到有表达式返回 true；否则，就会一
+			// 直跳到 default 语句
+		</script>
+	</body>
+</html>

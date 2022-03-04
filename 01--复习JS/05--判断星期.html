@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var day = prompt('输入本月的日期（即1日-31日）')
+
+			if (day % 7 == 1) {
+				console.log('星期三');
+			} else if (day % 7 == 2) {
+				console.log('星期四');
+			} else if (day % 7 == 3) {
+				console.log('星期五');
+			} else if (day % 7 == 4) {
+				console.log('星期六');
+			} else if (day % 7 == 5) {
+				console.log('星期日');
+			} else if (day % 7 == 6) {
+				console.log('星期一');
+			} else if (day % 7 == 0) {
+				console.log('星期二');
+			} else {
+				console.log('你打错了');
+			}
+		</script>
+	</body>
+</html>

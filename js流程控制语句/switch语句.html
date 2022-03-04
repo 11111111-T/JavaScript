@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// switch语句也是多分支预计  也可以实现多选1;
+			// 语法结构 switch 转换\开关
+			//执行思路:
+			// 利用我们的表达式的值 和 case 后面的选项值相匹配 如果匹配不上, 就执行该case里面的语句 如果都没有匹配上,那么执行default里面的语句,
+			/*
+			switch(表达式){
+				case value1:
+				执行语句1;
+				break;
+				
+				
+				case value2:
+				执行语句2
+				break;
+				
+				case value3:
+				执行语句3;
+				break;
+				....
+				
+				default:
+			执行最后的语句;
+			
+			}
+			*/
+
+			// 代码验证
+			/*
+			switch(2){
+				case 1:
+				console.log("这是1");
+				break;
+				
+				case 2:
+				console.log("这是2");
+				break;
+				
+				default:
+				console.log('错误的地方');
+				break;
+			}
+			
+			*/
+
+			/*
+			这是个案例:
+			var num1='123';
+			var num2='4';
+			
+			alert(num1<num2);
+			*/
+
+
+			// switch注意事项
+			/*
+					   var num=3;
+					   switch(num){
+						   case 1:
+						   console.log(1);
+						   // break;
+						   
+						   case 2:
+						   console.log(2);
+						   break;
+						   
+						   
+						   case 3:
+						   console.log(3);
+						   break;
+					   }*/
+			//1.我们开发里面 表达式我们经常写成变量
+			//2.我们num 的值 和 case里面的值相匹配的时候是 全等 必须是值和数据类型一致才可以 num==1
+			//3. 如果当前的case里面没有break  则不会退出switch 是执行下一个case 
+
+
+			/*		   
+					   switch练习
+					   查询水果
+
+
+			var name = prompt("请输入水果名称")			
+			switch(name){
+				case '葡萄':
+				alert("3.5元/斤");
+				break;
+				
+				case '香蕉':
+				alert("4元/斤");
+				break;
+				
+				
+				case '苹果':
+				alert("5元/斤");
+				break;
+				
+				case '橘子':
+				alert("3元/斤");
+				break;
+				
+				case '橙子':
+				alert("6元/斤");
+				break;
+				
+				case '圣女果':
+				alert("5元/斤");
+				break;
+				
+				default:
+				alert('请输入正确的水果')
+				break;
+				
+			}
+			*/
+			
+		</script>
+
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 鸡兔同笼  一共50只 ，脚160 ，求鸡多少只 ，兔子多少只！
+		 
+		鸡 i    i*2
+		兔子 (50-i)   (50-i)*4
+		 
+		 
+		 -->
+		
+		<script type="text/javascript">
+			
+			for (var i = 1; i < 50; i++) {
+				
+				if(((i*2)+((50-i)*4))==160){
+					console.log("鸡:"+i);
+					console.log("兔子:"+(50-i));
+				}
+			}
+			
+		</script>
+		
+	</body>
+</html>

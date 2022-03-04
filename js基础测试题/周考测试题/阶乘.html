@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- .编程实现5阶乘的结果 使用两种方式 -->
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+	// 阶乘::n=n*(n-1)
+	
+			function cheng(num){ //递归  必须包含结束条件
+			if(num==1){
+				
+				return 1
+			}
+			return num*cheng(num-1)
+			}
+			console.log(cheng(4));
+			
+
+
+
+			
+			var num = 1;
+			for (var i = 1; i<6; i++) {
+
+				num *= i
+			}
+			console.log(num);
+		</script>
+
+
+	</body>
+</html>

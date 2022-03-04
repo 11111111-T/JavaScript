@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>短路运算</title>
+
+		<!-- 短路运算原理,左边的表达式值可以确定,就不需要再运算右边的表达式值 -->
+
+	</head>
+	<body>
+		<script type="text/javascript">
+			//1. 用我们的布尔值参与的逻辑运算  true&&false 结果 false
+			// 2. 123&&456 是值  或者是  表达式  参与逻辑运算?
+			/*
+						第一:逻辑与短路运算语法: 表达式1 && 表达式2;
+						1. 如果第一个表达式的值为真, 则返回表达式2;
+						2. 如果第一个表达式的值为假, 则返回表达式1;
+			*/
+			// 例子
+			console.log(123 && 456); //456
+			console.log(0 && 456); //0
+			console.log(0 && 456 && 789 * 456321 & 7 + 789); //0
+
+			// 如果有空的或者否定的为假,其余是真的 0 '' null  undefined NaN
+			console.log('' && 456); //一条空行
+			console.log(null && 456); //null
+			console.log(undefined && 456); //undefined
+			console.log(NaN && 456); //NaN
+
+
+			/*			
+						第二:逻辑或 (||)  短路运算语法:表达式1||表达式2;
+						1.如果表达式1结果为真,则返回的是表达式1,
+						2.如果表达式1结果为假,则返回的是表达式2
+			*/
+			console.log(123 || 456); //123
+			console.log(123 || 456 || 4564 * 664); //123
+
+
+			console.log(0 || 456); //456
+			console.log(0 || 55 || 798 + 66 || 77 * 88); //456
+
+			// 短路运算例子
+			var num = 1;
+			console.log(123 || num++); //123
+			//上面的短路运算或|| 已经没有运算右边了
+			console.log(num); //1
+
+
+			var num = 0;
+			console.log(456 && num--); //0
+			console.log(num); //-1
+		</script>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 根据性别和体重计算输血量。女性体重不超过50kg的输血量为200毫升，否则250毫升；
+			男性不超过60kg的输血量为250毫升，否则300毫升 -->
+			
+		<script type="text/javascript">
+			
+			var sex = prompt("请输入您的性别")
+			var weight = prompt("请输入您的体重")
+			
+			if(sex=='女'){
+				
+				if(weight<50){
+					console.log("输血量为200ml");
+				}else{
+					console.log("输血量为250ml");
+				}
+				
+			}else{
+				
+				if(weight<60){
+					console.log("输血量为250ml");
+				}else{
+					console.log("输血量为300ml");
+				}
+				
+			}
+			
+			
+			
+		</script>
+	</body>
+</html>

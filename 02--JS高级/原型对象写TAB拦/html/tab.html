@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tab切换</title>
+		<style>
+			.tit span {
+				float: left;
+				text-align: center;
+				width: 100px;
+				background: #ccf;
+			}
+
+			.tit .select {
+				background: #99f;
+			}
+
+			.con div {
+				display: none;
+				width: 300px;
+				height: 200px;
+				line-height: 200px;
+				text-align: center;
+				background: #cfc;
+			}
+
+			.con .show {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="tit" id="tabTit">
+			<span class="select">1</span>
+			<span>2</span>
+			<span>3</span>
+		</div>
+		<div class="con" id="tabCon">
+			<div class='show'>初始化TAB</div>
+			<div>TAB切换2</div>
+			<div>Tab切换3</div>
+		</div>
+		<!-- 	<p>
+			使用原型对象的好处是可以让所有实例共享它所包含的属性和方法,
+			new操作符生成的对象并不能共享属性和方法，每次new一个新的对象时，
+			都要为这个对象开辟一个新的空间来存放它的属性和方法，
+			而且，在构造函数中，每次想要修改某个属性和方法时，
+			就要重新生成所有的实例，对资源造成了极大的浪费
+			类的方法都定义在prototype对象上面，所以类的新方法
+			可以添加在prototype对象上面
+		</p> -->
+		<script>
+			//ES6写法
+
+			//创建一个名为Tab的类
+			class Tab {
+				constructor(titId, titEle, conId, conEle) { //titId 是tabTit取得别名，
+					//span元素的集合					
+					this.titEle = document.getElementById(titId).getElementsByTagName(titEle)
+					//div元素的集合
+					this.conEle = document.getElementById(conId).getElementsByTagName(conEle)
+					var that = this
+					//遍历所有span
+					for (var i = 0; i < this.titEle.length; i++) {
+						//为span元素设置索引
+						this.titEle[i].id = i
+						console.log(this.titEle[i].id);
+						//绑定单击事件
+						this.titEle[i].onclick = function() {
+							// console.log(that);
+							// console.log(this); //这里的this是当前点击的span
+							//调用原型函数tabFun
+							that.tabFun(this)
+						}
+					}
+				}
+			}
+
+			// console.log(Tab.constructor);
+			//使用原型对象创建tabFun函数
+			Tab.prototype.tabFun = function(objTab) {
+				//类名置为空，去除原有样式
+				for (var i = 0; i < this.titEle.length; i++) {
+					this.titEle[i].className = ''
+					this.conEle[i].className = ''
+				}
+				//给span添加样式
+				objTab.className = 'select'
+				//改变当前div的display状态表
+				this.conEle[objTab.id].className = 'show'
+			}
+			//实例化一个对象Tab
+			new Tab('tabTit', 'span', 'tabCon', 'div')
+
+			//ES5写法		
+
+			/* function TabSwitch(titId, titEle, conId, conEle){
+				this.titEle = document.getElementById(titId).getElementsByTagName(titEle)
+				this.conEle = document.getElementById(conId).getElementsByTagName(conEle)
+				var that = this
+				for(var i = 0;i<this.titEle.length;i++){
+					this.titEle[i].id = i
+					this.titEle[i].onclick = function(){
+						console.log(that);
+						console.log(this);
+						that.tabFun(this)
+					}
+				}
+			}
+			TabSwitch.prototype.tabFun = function(objTab){
+				for(var i = 0;i<this.titEle.length;i++){
+					this.titEle[i].className = ''
+					this.conEle[i].className = ''
+				}
+				objTab.className = 'select'
+				this.conEle[objTab.id].className = 'show'
+			}
+			new TabSwitch('tabTit','span','tabCon','div') */
+		</script>
+	</body>
+</html>

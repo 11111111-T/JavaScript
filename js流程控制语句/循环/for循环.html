@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			1.for 重复执行某些代码,通常跟计数有关系
+			2.for 语法结构
+			
+			for(初始化变量;条件表达式;操作表达式){
+				//循环体
+			}
+			3.初始化变量:	就是用var 声明的一个普通变量,通常用于作为计数器使用
+			4.条件表达式:	就是用来决定每一次循环是否继续执行 就是终止的条件
+			5.操作表达式:	是每次循环最后执行的代码, 经常用于我们计数器变量进行更新(递增或者递减)
+			
+			*/
+
+			// for循环执行过程
+			/*
+			for (var i=0;i<101;i++) {
+				console.log('你好');	
+			}
+			1.首先执行里面的计数器变量  var i= 1; 但是这句话在for  里面只执行一次.
+			2.去i <= 100 来判断是否满足条件, 如果满足条件  就去执行  循环体  不满足条件退出循环体  第二轮
+			3.最后去执行i++  i++是单独写的代码 递增  第一轮结束
+			4.接着去执行i<=100 如果满足条件  就去执行 循环体  不满足条件退出循环体 第二轮...以此类推
+			*/
+
+
+
+			//这样打印'楠楠'多少次取决于填入的数字,
+			/*var num=prompt("请输入次数");
+			for (var i=1;i<=num;i++) {
+				console.log('楠楠');	
+			}
+			*/
+
+			/* 
+		   for可以重复执行不同的代码  因为我们有计数器变量 i的存在  i  每次循环值都会变化
+		   我们想要输出一个人  1~100岁
+		   案例:
+		   
+			for(var i=1;i<=100;i++){
+				console.log('这个人今年'+i+'岁');
+				
+			}
+		   
+		   // 还可以这样写
+		for(var i=1;i<=100;i++){
+			if(i==1){
+				console.log("这个人今年1岁了,他出生了");
+				
+			}else if(i==100){
+				console.log("这个人今年100岁了,已经不行了");
+			}else{
+				console.log("这个人今年"+i+'岁了');
+			}
+			
+		}
+		   */
+
+			/* 1+...+100的和
+		  
+		  var h=0;
+		  for(var i=1;i<=100;i++){
+			   // h=h+i;
+			   h+=i
+			  }
+		  console.log(h);
+		*/
+
+
+			/*1-100所有数的平均值
+			案例
+			
+			var h = 0;
+			var p = 0;
+			for (var i = 1; i <= 100; i++) {
+			h+=i;
+			p=h/100;
+			}
+			console.log('1-100的数和:'+h);
+			console.log('1-100的数平均值:'+p);
+*/
+
+
+			/* 1-100之间所有偶数和奇数的和
+			案例
+			
+			var num1 = 0;
+			var num2 = 0;
+			for (var i = 1; i <= 100; i++) {
+
+				if (i % 2 == 0) {
+					num1 = num1 + i;
+				} else {
+					num2 = num2 + i;
+				}
+			}
+			console.log("1-100之间偶数和:"num1);
+			console.log("1-100之间奇数和:"num2);
+ */
+
+			/*
+			1 - 100 之间所有能被3整除的数字的和
+		   
+		   var num=0;
+		   for(var i=1;i<=100;i++){
+			   
+			   if(i%3==0){
+				   
+				   num=num+i;
+			   }
+			   
+		   }
+		console.log(num);
+			*/
+
+
+			/*
+			求班级有多少人数,以人数来看总成绩和平均成绩
+			案例
+			
+			var num = prompt("班级人数");
+			var zcj = 0; //总成绩
+			var pj = 0; //平均成绩
+			zcj = zcj * 1;
+			pj = pj * 1;
+
+			for (var i = 1; i <= num; i++) {
+				i = i * 1;
+				
+				var cj = prompt("第" + i + '位同学成绩')
+				//给每个学生的成绩都转换为数字型
+				cj = cj * 1;
+				zcj = zcj + cj;
+			}
+			pj = zcj / num;
+			alert(zcj);
+			alert(pj);
+			*/
+
+
+
+			/*
+			打印星星
+			*/
+
+
+			  var str =''
+			  for (var i=1;i<=5;i++){
+			str=str+'❤️'
+
+			}
+				console.log(str);	
+
+			var num = prompt("请输入小星星")
+
+			var str=''
+			for(var i=1;i<=num;i++){
+				
+				
+				str=str+'❤️';
+				
+			}
+
+			console.log(str);	
+
+
+
+
+
+
+
+
+
+
+			// for (var i=0;i<=10;i++) {
+			// 	for(var j=0; j<;j++)
+			// 	console.log('你好');	
+			// }
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

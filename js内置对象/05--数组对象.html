@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数组对象</title>
+		<script type="text/javascript">
+			// 创建数组的两种方式
+			// 1. 利用数组字面量
+			var arr = [];
+			console.log(arr[0]);
+
+			// 2. 利用 new Array()
+			// var arr =new Array()	   创建一个空数组
+			// var arr = new Array(2);	这个2表示数组的长度为2    里面有2个空的数组元素
+
+			console.log(arr);
+
+
+			console.log('*********翻转数组*********');
+
+			//翻转数组
+			function reverse(arr) {
+				var newArr = [];
+				for (var i = arr.length - 1; i >= 0; i--) {
+					newArr[newArr.length] = arr[i];
+				}
+				return newArr;
+			}
+			console.log(reverse([1, 2, 3]));
+
+			console.log(reverse(1, 2, 3));
+
+
+
+
+			console.log('*********检测是否为数组*********');
+
+
+
+			function reverse1(arr1) {
+				// if (arr1 instanceof Array) {
+				if (Array.isArray(arr1)) {
+					var newArr1 = [];
+					for (var i = arr1.length - 1; i >= 0; i--) {
+						newArr1[newArr1.length] = arr1[i];
+					}
+					return newArr1;
+				} else {
+					return 'error 这个参数要求必须是数组格式[1,2,3]'
+				}
+
+			}
+			console.log(reverse1([1, 2, 3]));
+			console.log(reverse1(1, 2, 3));
+
+
+
+			// 检测是否为数组
+			// (1)  instanceof 运算符 他可以用来检测是否数组
+			var arr1 = [];
+			var obj = {};
+			console.log(arr1 instanceof Array); //返回true
+			console.log(obj instanceof Array); //返回true
+
+
+
+
+			//(2) Array.isArray(参数);		H5新增的
+			console.log(Array.isArray(arr1));
+			console.log(Array.isArray(obj));
+
+
+
+
+			console.log('*********添加数组元素*********');
+			// 1.push()  在我们数组的尾部 添加一个 或多个元素  push  推
+
+			var arr = [1, 2, 3];
+			// arr.push(4,'4');
+			console.log(arr.push(4, 'CC')); //返回的是数组的长度
+			console.log(arr);
+
+			// (1) push 是可以给数组追加新的元素
+			// (2) push() 参数直接写 数组元素就可以了		
+			// (3) push() 完毕之后,返回的结果是 新数组的长度
+			// (4) 原数组也会发生变化
+
+
+			// 2. unshift 在我们数组的开头 添加 一个或者多个元素
+
+			// arr.unshift('泡泡',100)
+			console.log(arr.unshift('泡泡', 100));
+			console.log(arr);
+
+			// (1) unshift 是可以给数组追加新的元素
+			// (2) unshift() 参数直接写 数组元素就可以了		
+			// (3) unshift() 完毕之后,返回的结果是 新数组的长度
+			// (4) 原数组也会发生变化
+
+
+			console.log('*********删除数组元素*********');
+			// 1. pop() 删除数组最后一个元素 把数组长度减1 无参数
+			// arr.pop();
+			console.log(arr.pop()); //返回被删除的元素
+			console.log(arr);
+
+			// (1) pop 是可以删除数组最后一个元素,记住一次只能删除一个元素
+			// (2) pop() 无参数		
+			// (3) pop() 完毕之后,返回的结果是 删除的参数
+			// (4) 原数组也会发生变化
+
+
+
+			// 2. shift() 删除数组第一个的元素 把数组长度减1 无参数
+			// arr.shift();
+			console.log(arr.shift()); //返回被删除的元素
+			console.log(arr);
+
+			// (1) shift 是可以删除数组第一个元素,记住一次只能删除一个元素
+			// (2) shift() 无参数		
+			// (3) shift() 完毕之后,返回的结果是 删除的参数
+			// (4) 原数组也会发生变化
+
+
+			console.log('*********筛选数组*********');
+
+			// 有一个包含工资的数组[1500,1200,2000,2100,1800]要求把数组中超过2000的删除  剩余的放在新的数组里面
+
+			var arr = [1500, 1200, 2000, 2100, 1800];
+
+			var newArr = [];
+			for (i = 0; i <= arr.length; i++) {
+				if (arr[i] < 2000) {
+					// newArr[newArr.length]=arr[i]; 老办法
+					// newArr.unshift(arr[i])
+					newArr.push(arr[i])
+					// newArr.sort();     排序
+				}
+
+
+			}
+			console.log(arr);
+			console.log(newArr);
+
+			console.log('*********数组排序*********');
+			// 数组排序
+			// 1. 翻转数组
+			var arr = [1500, 1200, 2000, 2100, 1800];
+			arr.reverse();
+			console.log(arr);
+
+
+			// 2.冒泡排序
+			// var arr=[1500,1200,2000,2100,1800];
+			var arr = [10, 1, 20, 2, 30, 3];
+			arr.sort(); //并不完美 需要+function() 如下::
+			// 里面的函数是固定写法
+			// arr.sort(function(a,b){
+			//  return a-b; 这是升序排列
+			//  return b-a; 这是降序排列
+			// });
+			console.log(arr);
+
+			/*
+			  // 冒泡
+			  for(i=0;i<=arr.length-1;i++){ //外面的管趟数
+				  for(j=0;j<=arr.length-i-1;j++){ //里面是每一趟交互次数
+					  if(arr[j]>arr[j+1]){
+						  var tmp=arr[j];
+						  arr[j]=arr[j+1];
+						  arr[j+1]=tmp;
+						  
+						  
+					  }
+					  
+					  
+				  }
+			  }
+			  console.log(arr);
+			  */
+
+
+
+
+			console.log('*********数组索引号方法*********');
+			// 返回数组元素索引号方法
+			// indexOf(数组元素) 返回数组元素的索引号
+			// 只返回第一个满足条件的索引号
+			// 如果找不到该数组元素  返回-1
+			var Arr = ['a', 'b', 'c', 'd', 'b']
+			// var Arr = ['a', 'b','d','b']
+			console.log(Arr.indexOf('c')); //返回索引号
+
+
+			// lastIndexOf(数组元素) 从后面往前查找
+			// 如果找不到该数组元素  返回-1
+			console.log(Arr.lastIndexOf('b')); //返回索引号
+
+
+			console.log('**************重点案例::数组去重************');
+
+			// 首先创建新的数组接受 去重之后留下的新数组
+			function unique(ARR) {
+				var newArr = [];
+				// 数组去重的核心算法
+				for (var i = 0; i < ARR.length; i++) {
+
+					// 利用indexOf找不到该数组元素  返回-1的特性
+					if (newArr.indexOf(ARR[i]) == -1) {
+
+						newArr.push(ARR[i])
+					}
+				}
+				return newArr
+			}
+			// var tmp = unique(['a', 'b', 'h', 'm', 'c', 'd', 'a', 'h', 'm', 'x', 'y', 'h', 'm', 'a', 'c'])
+
+			var tmp = unique(['cc', 'aa', 'dd', 'aa'])
+			console.log(tmp);
+
+
+			console.log('**************数组转化字符串************');
+
+			// 1. toString() 将我们的数组转化为字符串
+			var arr=['b',1,'a'];
+			console.log(arr.toString()); 
+			
+			// 2. join('分隔符')	可以符号进行分割
+			
+			var arr=['刘','关','张']
+			console.log(arr.join(''));		//刘,关,张
+			console.log(arr.join('|'));		//刘|关|张
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

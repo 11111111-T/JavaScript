@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+		
+			var vlp = prompt("请输入会员卡号");
+
+			//转换为数字型
+			vlp = parseInt(vlp);
+			//查看变量的类型是否转换
+			console.log(typeof vlp);
+			// 分离三位数的每一位
+			
+			
+			var v=vlp%10;
+			var p=parseInt(vlp%100);
+			var l=parseInt(vlp%10)%10;
+			
+			
+			
+			if (vlp > 20) {
+				console.log("中奖了")
+			} else {
+				console.log("没有中奖")
+			}
+			// console.log(vlp);
+		</script>
+	</body>
+</html>

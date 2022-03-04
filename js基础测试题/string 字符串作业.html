@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>作业</title>
+		<script type="text/javascript">
+			console.log('***************第一题***************');
+			/*
+			1.
+			统计字符串中出现次数最多的字符是哪个， 出现了几次str = "abcdeereeryhhssqqq"
+			*/
+			/*
+			var str = "abcdeereeryhhssqqq";
+			//创建空对象 统计每个字符出现的次数
+			var obj = {};
+			//使用for循环遍历  获取字符串中的每一个字符
+			for (i = 0; i < str.length; i++) {
+				
+				if (!obj[str[i]]) {
+					
+				obj[str[i]]=1;
+				
+				}else{
+					obj[str[i]]++;
+				}
+
+			}
+			console.log(obj);
+			
+			
+			var max=0;
+			var ch;
+			for( var key in obj){
+				if(obj[key]>max){
+					// 将最大值赋给max
+					max=obj[key];
+					// 记录最大值对相应的字符
+					ch=key;
+					
+				}
+				
+				
+			}
+				console.log(ch+'::'+max);
+				*/
+			   
+			   
+			// 第二种方法
+			/*
+			var str = "absssschhssdeereehssryssqqssssq";
+			var st = str.indexOf('s');
+			var num=0;
+			//新定义的数组利用indexof的特性,来循环
+			while(st!==-1){
+				console.log(st);
+				num++;
+				//核心算法
+				st=str.indexOf('s',st+1) //找不到继续加1找
+			}
+			console.log('出现了::'+num+'次');
+			*/
+		   
+			/*
+			// 这是利用数组求的::出现次数最多的字符是哪个， 出现了几次
+			var str = ['cc', 'dd', 'cc', 'aa', 'tt', 'cc'];
+			console.log(str);
+			var st = str.indexOf('cc');
+			var num=0;
+			while (st !== -1) {
+				num++
+				console.log(st);
+				st = str.indexOf('cc', st + 1)
+			}
+			console.log(num);
+			*/
+
+
+
+			console.log('***************第二题***************');
+
+			/*
+			2.
+			去除 "abcdeereeryhhssqqq"中的重复字符
+			*/
+
+
+			// 首先创建一个新数组
+			// var str = 'abcdeereeryhhssqqq';
+			// console.log(str);
+			/*
+			// 转换成数组
+			var temp = new String('abcdeereeryhhssqqq');
+			var str = [];
+			// str = temp;
+			// 去重的核心算法
+
+			for (i = 0; i < temp.length; i++) {
+				if (str.indexOf(temp[i]) == -1) {
+
+					str.push(temp[i])
+				}
+
+			}
+
+			console.log(temp);
+			console.log(str);
+			console.log(str.length);
+
+			// str =String('abcdeereeryhhssqqq')
+			// console.log(typeof str);
+			*/
+
+
+
+			console.log('***************第三题***************');
+
+
+			/*
+			3.
+			编写猜数字小游戏， 根据用户的输入提示猜正确， 还是数字猜大了还是小了直到用户猜正确结束程序
+			function myrandom(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			var random = myrandom(1, 10);
+			while (true) { //死循环
+				var num = prompt('输入1~10之间的数字')
+
+				if (num > random) {
+					alert('你猜大了')
+
+				} else if (num < random) {
+					alert('你猜小了')
+				} else {
+					alert('猜对了')
+					break; //退出整个循环 ,结束程序
+				}
+
+			}
+			// myrandom();
+			console.log(myrandom());
+
+			*/
+
+
+
+
+			console.log('***************第四题***************');
+			/*
+			4.
+			编写函数判定字符串是不是回文， 回文示例: 上海自来水来自海上
+			*/
+			/*
+			第一种方法
+			var str = '上海自来水来自海上';
+			var st = str.split('');
+			var st2 = st.reverse();
+			console.log(st);
+			console.log(st2);
+
+			var flag = false; //开关法
+
+			for (i = 0; i <= str.length; i++) {
+				if (str[i] != st2[i]) {
+					flag = true;
+				}
+			}
+			if (flag) {
+				console.log("不是回文");
+			} else {
+				console.log("是回文");
+			}
+			*/
+
+			/*
+			第二种方法
+			var str = '上海自来水来自海上';
+			var tr = '';
+			for (var i = str.length - 1; i >= 0; i--) {
+				// tr=tr+str[i]
+				tr += str[i]
+			}
+				if(tr==str){
+					console.log("是回文");
+				}
+				else{
+					console.log("不是回文");
+				}
+				*/
+
+			console.log('***************第五题***************');
+
+			/*
+			5.编写函数删除字符串中的数字    321hgchyf165jggfdi65tduc
+			*/
+
+
+
+
+			/*
+			// 第一种是封装函数
+			function del(str){
+						   var tr = '';
+						   for(var i=0;i<str.length;i++){
+						   	if(isNaN(str[i])){
+						   		tr=tr+str[i]
+						   		// tr+=str[i]
+						   	}
+						   }
+						   return tr
+					   }
+						
+						// console.log(tr);
+			
+						var td = del('321hgchyf165jggfdi65tduc')
+						console.log(td);
+			*/
+
+
+			/*
+		   第二种方法
+			   var str='321hgchyf165jggfdi65tduc'
+			   var tr = '';
+			   for(var i=0;i<str.length;i++){
+			   	if(isNaN(str[i])){
+			   		tr=tr+str[i]
+			   		// tr+=str[i]
+			   	}
+			   }
+			
+			console.log(tr);
+
+
+
+		console.log('***************第六题***************');
+
+			/*
+			6. 编写函数翻转字符串
+			*/
+
+			/*
+			第一种方法
+			// c,u,d,t,5,6,i,d,f,g,g,j,5,6,1,f,y,h,c,g,h,1,2,3
+			var str = '321hgchyf165jggfdi65tduc'
+			var st = str.split('');
+			var tr = st.reverse();
+			console.log(tr);
+			*/
+
+			/*
+		   第二种方法
+		   var str='321hgchyf165jggfdi65tduc'
+		   var tr='';
+		   翻转的核心算法
+			for(i=str.length-1;i>=0;i--){
+				tr+=str[i]
+			}
+		   console.log(tr);		 //	cudt56idfggj561fyhcgh123  
+		   */
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

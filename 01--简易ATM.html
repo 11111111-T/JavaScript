@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>模拟取钱业务</title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+		
+		
+			var isExcite = false;
+			
+			console.log("欢迎来到xxx银行");
+			do {
+				console.log("***********************************");
+				console.log("**          1.取钱					*");
+				console.log("**          2.查询余额			    *");
+				console.log("**          3.转账					*");
+				console.log("**          4.存钱					*");
+				console.log("**          5.退卡					*");
+				console.log("************************************");
+				console.log("请输入您的选择：");
+				var num = prompt("请选择业务：")
+				
+				num=num*1;
+				// var num = 2;
+				switch (num) {
+						case 1:
+								console.log("正在取钱....");
+								console.log("成功取钱1000000");
+							break;
+						case 2:
+							console.log("查询业务");
+							console.log("卡上余额0.1元");
+							break;
+						case 3:
+							console.log("转账业务");
+							console.log("成功转账1000元");
+							break;
+						case 4:
+							console.log("存钱业务");
+							console.log("成功存钱10000元");
+							break;
+						case 5:
+							console.log("退卡成功，请带好您的卡片");
+							break;
+						default:
+							break;
+				}
+				
+				if(num!=5){
+					var  b = confirm("是否继续")
+					if(!b){
+						isExcite = true;
+					}
+				}else{
+					isExcite = true;
+				}
+				
+
+			} while (!isExcite)
+			
+			
+		</script>
+
+
+	</body>
+</html>

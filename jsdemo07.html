@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js中的流程控制</title>
+	</head>
+	<body>
+		<!-- 
+		 流程控制分类：
+			1.顺序结构  
+				代码自上至下一次执行  每行代码都会被执行
+			2.选择结构
+				根据条件的不同 会选择不同的执行路径
+				单分支
+					语法：
+						if(条件表达式){   条件表达式的结果 true
+							//代码块
+						}
+				双分支
+					语法：
+						if(条件表达式){   条件表达式的结果 true
+							//代码块1
+						}else{  条件表达式的结果 false
+							//代码块2
+						}
+				多分支
+					语法：  区间判定
+						if(条件表达式1){   条件表达式的结果 true
+							//代码块1
+						}else if(条件表达式2){  条件表达式的结果 true
+							//代码块2
+						}else if(条件表达式3){  条件表达式的结果 true
+							//代码块3
+						}.......
+						else{
+							//代码块n
+						}
+						
+					语法：  等值判定
+						
+					switch(变量){
+					
+					 case 值1 :
+						//代码块
+						break; // 结束当前分支
+					 case 值2 :
+						//代码块
+						break;
+					 case 值3 :
+						//代码块
+						break;
+						.....
+					 case 值n :
+						//代码块
+						break;
+					 default:
+						//代码块
+						break;
+					}
+						
+			3.循环结构
+				执行相同或者类似的操作
+				for循环
+					语法：
+					
+						for(表达式1;表达式2;表达式3){
+							// 需要重复执行的代码块
+						}
+						
+						表达式1:定义计数器
+						表达式2:判定循环是否结束    true -> 继续循环   false->结束循环
+						表达式3:改变计数器的值
+				
+				
+				
+				while循环
+					语法：
+					while(表达式){  // true
+						// 需要重复执行的代码块
+					}
+				
+				do..while
+					语法：
+					
+						do{
+							// 需要重复执行的代码块
+						}while(条件表达式)
+				
+				
+				
+		 -->
+		<script type="text/javascript">
+			// var age = prompt("请输入您的年龄");
+			// console.log(typeof age); // string
+			//判定是否成年
+			// if(age>18){
+			// 	console.log("成年");
+			// }
+
+			//双分支
+			// if(age>=18){
+			// 	console.log("成年");
+			// }else{
+			// 	console.log("未成年");
+			// }
+
+			/* 
+				成绩等级判定
+					>=60 及格
+					>=70 中等
+					>=80 良好
+					>=90 优秀
+					<60  不及格
+			 */
+
+			// var score = prompt("请输入分数")
+			//判定成绩等级  多分支
+
+			// if(score>=60&&score<70){
+			// 	console.log("及格");
+			// }else if(score>=70&&score<80){
+			// 	console.log("中等");
+			// }else if(score>=80&&score<90){
+			// 	console.log("良好");
+			// }else if(score>=90){
+			// 	console.log("优秀");
+			// }else{
+			// 	console.log("不及格");
+			// }
+
+			// 程序优化  调整判定的位置
+			// if (score >= 90) {
+			// 	console.log("优秀");
+			// } else if (score >= 80) {
+			// 	console.log("良好");
+			// } else if (score >= 70) {
+			// 	console.log("中等");
+			// } else if (score >= 60) {
+			// 	console.log("及格");
+			// } else {
+			// 	console.log("不及格");
+			// }
+
+			//多分支 等值判定 指定学习计划
+
+			// var day = prompt("请输入星期几")  //string    ===恒等
+			// string -> number	
+			// day = day*1;
+			// switch (day) {
+			// 	
+			// 	case 1:
+			// 		console.log("学习html");
+			// 		break; // 结束当前分支
+			// 	case 2:
+			// 		console.log("学习css");
+			// 		break;
+			// 	case 3:
+			// 		console.log("学习js");
+			// 		break;
+			// 	case 4:
+			// 		console.log("学习vue");
+			// 		break;
+			// 	case 5:
+			// 		console.log("react");
+			// 		break;
+			// 	case 6:
+			// 		// console.log("周末休息");
+			// 		// break;
+			// 	case 7:
+			// 		console.log("周末休息");
+			// 		break;
+			// 	default:
+			// 		console.log("请输入正确的天数!");
+			// 		break;
+			// 	
+			// }
+			
+			//打印输出 hello javascript 10次  for
+			/*
+				for循环执行的流程
+				  表达式1  -> 表达式2 (true)->循环体 -> 表达式3(计数器自增1)->表达式2 (true)->循环体
+				  ->表达式3(计数器自增1) .......表达式2 (false)->循环结束
+			*/ 
+		   
+		   
+			// for(var i=0;i<10;i++){
+			// 	console.log("hello javascript");
+			// }
+			
+			//for循环的变形
+				// var i = 0;
+			// for(;i<10;i++){
+			// 	console.log("hello javascript");
+			// }
+			
+			// for( var i=0; ;i++){ //死循环
+			// 	console.log("hello javascript");
+			// }
+			
+			// for( var i=0;i<10;){ //死循环
+			// 	console.log("hello javascript");
+			// }
+			
+			// for(;;){ //死循环
+			// 	console.log("hello javascript");
+			// }
+			
+			// 1+2+3+4+...+100   
+			//  var sum = 0;
+			// for (var i = 1; i <101 ; i++) {
+			// 	sum = sum+i;
+			// }
+			// console.log(sum);
+			
+			
+			//使用while循环实现  1+2+3+4+...+100 
+			var i = 1;
+			var sum = 0;
+			// while(i<101){
+			// 	sum+=i;
+			// 	i++;
+			// }
+			
+			// 1+2+3+4+..100   sum>2000 停止循环
+			
+			// while(sum<2000){
+			// 	sum+=i;
+			// 	i++;
+			// }
+			// console.log(i-1);
+			
+			
+			// do.. while  1+2+3....+100
+			var i = 1;
+			var sum = 0;
+			// do{
+			// 	sum+=i;
+			// 	i++;
+			// }while(i<101)
+			
+			// 该循环至少执行一次
+			do{
+				sum+=i;
+				i++;
+			}while(sum<2000)
+			
+			
+			console.log(sum);
+			console.log(i-1);
+			
+			
+		</script>
+	</body>
+</html>

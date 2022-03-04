@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	<!-- 
+	  假设从A地到B地的火车票有硬座和硬卧，价格分别为100和190元。
+	  根据铁路部门规定，未成年人(18周岁以下)身高不足120cm免票，120(含)-150(不含)cm需半票，
+	  150及以上的需全票，未成年人卧铺只能减免硬座的半价。
+	  请设计一个购票程序，要求输入年龄和身高(未成人需要输入)以及票的类型，输出票的价
+	 -->
+	 
+	 <script type="text/javascript">
+	 	
+		var  age = prompt("请输入您的年龄")
+		var ticket = prompt("请输入票型")
+		
+		//判定用户是否成年
+		
+		if(age>=18){
+			
+			if(ticket=="硬座"){
+				console.log("票价为100");
+			}else{
+				console.log("票价为190");
+			}
+			
+		}else{
+			var height = prompt("请输入您的身高")
+			//根据身高和票型判定价格
+			if(height<120){
+				console.log("免费");
+			}else if(height<150){
+				
+				if(ticket=="硬座"){
+					console.log("票价为50");
+				}else{
+					console.log("票价为140");
+				}
+				
+			}else{
+				
+				if(ticket=="硬座"){
+					console.log("票价为100");
+				}else{
+					console.log("票价为190");
+				}
+			}
+			
+		}
+		
+		
+		
+	 </script>
+	 
+	 
+	</body>
+</html>

@@ -1,0 +1,26 @@
+<<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+　　function insertNode(){
+　　　　var elementnode = document.createElement("li");
+　　　　//var elementnode.setAttribute("id","text");
+　　　　var context = document.createTextNode("新建文本内容节点");
+　　　　elementnode.appendChild(context);
+　　　　var list = document.getElementById("list")
+　　　　list.insertBefore(elementnode,list.childNodes[0]);
+　　}
+</script>
+</head>
+
+<body>
+　　<!-- <button onClick="insertNode()">insert</button>-->
+　　<input type="button" value="insert" onClick="insertNode()">
+　　<ol id="list">
+　　　　<li>原列表一</li>
+　　　　<li>原列表二</li>
+　　</ol>
+</body>
+</html>

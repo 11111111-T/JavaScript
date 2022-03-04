@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>函数编写</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			console.log('1. 写一个函数，能返回传入的任意两个数字的最大值。');
+
+			function h1(num, nums) {
+				if (num > nums) {
+					console.log(num);
+				} else {
+					console.log(nums);
+				}
+				return
+			}
+			h1(1, 2)
+
+
+
+			console.log('2. 写一个函数，能返回传入的任意三个数字的最大值。');
+
+			function h(num, nums, numss) {
+				if (num > nums && num > numss) {
+					console.log('第一个数最大::' + num);
+				} else if (nums > num && nums > numss) {
+					console.log('第二个数最大::' + nums);
+				} else {
+					console.log('第三个数最大::' + numss);
+				}
+				return
+			}
+			h(1, 2, 3)
+
+			console.log('3. 写一个函数，能判断传入的一个数值是否是质数，如果是质数返回true，如果不是质数返回false，(质数(素数)：从2开始只能被1和自身整数的数)');
+
+			function h2(num) {
+				var flag = true
+				for (var i = 2; i < num; i++) {
+					if (num % i == 0) {
+						flag = false
+						break;
+					} 
+				}
+				if(flag){
+				console.log('true:是质数');
+				}else{
+					console.log('false:不是质数');
+				}
+	
+				
+			}
+			h2(22)
+
+
+			console.log('4. 写一个函数，能翻转传入的任意数组，并把翻转结果通过返回值返回。');
+
+			function h3(arr) {
+				let array = arr.reverse()
+				console.log(array);
+			}
+			h3([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+
+			console.log('5. 写一个函数，能对所有传入的数组按照从小到大进行排序， 并把排序结果通过返回值返回');
+
+			function h4(arr) {
+				let arra = arr.sort(function(a, b) {
+					return a - b
+				})
+				console.log(arra);
+			}
+			h4([10, 9, 8, 7, 6, 5, 4, 3, 13, 1])
+		</script>
+	</body>
+</html>

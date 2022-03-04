@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>创建对象的三种方式</title>
+		<script type="text/javascript">
+			// 一.利用字面量创建对象,
+
+			// 1.字面量创建对象 {};
+			var obj = {}; //创建了一个空的对象
+
+			var obj = {
+				uname: '张三',
+				age: 22,
+				sex: '男 ',
+				sayHi: function() {
+					console.log('hi~~');
+				}
+			}
+			/*
+			(1) 里面的属性或者方法我们采取 键 值 对的形式   键 属性名:  值 属性值
+			(2) 多个属性或者方法中间用逗号隔开的
+			(3) 方法冒号后面跟的是一个匿名函数
+			*/
+
+			// 2. 使用对象
+			// (1) 调用对象的属性 我们采取 对象名.属性名
+			console.log(obj.uname);
+
+			// (2) 调用属性还有一种方法 对象名['属性名']
+			console.log(obj['age']);
+
+			// (3) 调用对象的方法 sayHi   对象名.方法名()
+			obj.sayHi();
+
+
+			console.log('**********案例::狗对象*************');
+
+
+			var dog = {
+				name: '可可',
+				type: '阿拉斯加犬',
+				age: 5 + '岁',
+				color: '棕红色',
+				jineng: function() {
+
+					console.log('汪汪汪(bark)');
+					console.log('演电影(showFilm)');
+				}
+
+			}
+			//第一种方法,   对象名.属性名
+			console.log(dog.name);
+			//第二章方法,  对象名['属性名']
+			console.log(dog['age']);
+			// 第三种,  对象名.方法名()  调用函数
+			dog.jineng()
+
+
+
+
+
+			// 变量  属性  函数  方法的区别
+			// 1.变量和属性相同  他们都是用来存储数据的
+			var num=10;
+			 var obj={
+				 age:18,
+			 }
+			console.log(obj.age);//18
+
+			// console.log(age);//报错
+
+			// (1)变量  单独声明并赋值  使用的时候直接写变量名 单独存在
+			// (2)属性  在对象里面的不需要声明的  使用的时候必须是 对象.属性
+			
+			// 2. 函数和方法的相同点  都是实现某种功能  做某件事
+				
+			//(1) 函数  单独赋值并调用的  函数名()   单独存在的;
+			//(2) 方法  在对象里面   调用的时候  对象.方法();
+
+
+
+
+
+
+			/*
+			3.利用构造函数创建对象,
+			*/
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

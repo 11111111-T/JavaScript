@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 当气温高于26℃时，需要开启制冷空调；气温低于10℃则开启制热空调；其余情况只需要开启送风模式即可。
+		编制自动温控程序，控制操作用输出相应的提示字符串来模拟，比如“开启制冷“ -->
+		
+		<script type="text/javascript">
+			
+			var num = prompt("请输入温度")
+			
+			if(num>26){
+				console.log("开启制冷");
+			}else if(num<10){
+				console.log("开启制热");
+			}else{
+				console.log("开启送风模式");
+			}
+			
+			
+		</script>
+	</body>
+</html>

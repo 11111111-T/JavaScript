@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 出租车，起步价(2公里以内)为7元，超过2公里的按照每公里3元计算。要求根据路程计算费用 -->
+		
+		<script type="text/javascript">
+			var  num = prompt("请输入里程")
+			
+			// if(num<=2){
+			// 	console.log("7");
+			// }else{
+			// 	var money = (num-2)*3+7
+			// 	console.log(money);
+			// }
+			
+			/*三目运算的语法 
+				
+				表达式 ?  值1:值2
+				表达式结果为true   值1
+				表达式结果为false  值2
+			
+			*/
+			
+			var money = num<=2 ? "车费为7元": (num-2)*3+7
+			console.log(money);
+		</script>
+	</body>
+</html>

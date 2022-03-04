@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>String对象</title>
+		<script type="text/javascript">
+			//基本包装类型
+			var arr = 'zhang';
+			console.log(arr);
+			//对象 才有 属性和方法   复杂数据类型 才有属性和方法 
+			//简单数据类型为什么会有 length 属性呢
+			//基本包装类型::就是把简单数据类型 包装成为了  复杂数据类型
+			// (1) 把简单数据类型包装成复杂数据类型
+			var temp = new String('zhang')
+			// (2) 把临时变量的值 给 str
+			arr = temp;
+			// (3) 销毁这个临时变量
+			temp = null;
+			console.log(arr);
+			console.log(arr.length);
+
+			console.log('****************字符串的不可变性****************');
+
+			var arr = 'zhang';
+			console.log(arr);
+			arr = 'zhang'
+			console.log(arr);
+
+			//因为我们的字符串的不可变 所以不要大量拼接字符串,
+			/*
+			var arr1='';
+			for(i=0;i<5;i++){
+				
+				arr1+=i;
+			}
+			console.log(arr1);
+			*/
+
+
+
+			console.log('****************根据字符串返回位置****************');
+			//数组名.indexOf(要查找的字符,[起始位置])
+
+			var arr2 = '中国人民真神气,真的好';
+			console.log(arr2.indexOf('真'));
+			console.log(arr2.indexOf('真', 5)); //从索引号是 3的位置往后查找
+
+
+
+			console.log('****************根据位置返回字符****************');
+			// 1. charAt(index) 根据位置返回字符
+			var str = 'zhang'
+			console.log(str.charAt(2));
+
+			//遍历所有字符
+			for (i = 0; i < str.length; i++) {
+				console.log(str.charAt(i));
+			}
+
+			// 2. charCodeAt(index)  返回相应索引号的字符ASCII值
+			// 目的::判断用户按下了那个键
+			console.log(str.charCodeAt(4));
+
+
+			// 3. str[index] H5新增的  获取指定位置出字符
+			console.log(str[0]);
+
+
+			console.log('**************来判断是否有该属性******************');
+
+			// 有一个对象  来判断是否有该属性  格式  对象['属性名']
+			var o = {
+				age: 18,
+			}
+			if (o['age'])
+			// if(o.age)  有问题
+			{
+				console.log('里面有该属性');
+
+			} else {
+				console.log('里面没有该属性');
+			}
+
+
+			console.log('******************案例::返回字符位置******************');
+
+
+			var str = 'adaasafafakjnkjbsjbka';
+			var o = {};
+			for (var i = 0; i < str.length; i++) {
+				// 核心算法 
+				var chars = (str.charAt(i)); //chars是字符串的每一个字符
+				if (o[chars]) { //得到的是属性值
+					o[chars]++;
+
+				} else {
+					o[chars] = 1;
+
+				}
+			}
+
+			console.log(o);
+			var max = 0;
+			var ch = '';
+			for (var k in o) {
+				//k得到是属性名
+				//o[k] 得到的是属性值
+
+				if (o[k] > max) {
+					max = o[k]
+					ch = k;
+				}
+			}
+			console.log(ch);
+			console.log(max);
+
+
+
+
+
+
+			/*
+			var str = 'adaasafafakjnkjbsjbka';
+
+			var st = {};
+			for (i = 0; i < str.length; i++) {
+
+				if (!st[str[i]]) {
+
+					st[str[i]] = 1;
+
+				} else {
+					st[str[i]]++;
+				}
+
+			}
+			console.log(st);
+
+
+			var max = 0;
+			var ch;
+			for (var key in st) {
+				if (st[key] > max) {
+					// 将最大值赋给max
+					max = st[key];
+					// 记录最大值对相应的字符
+					ch = key;
+
+				}
+			}
+			console.log(ch+'::'+max);
+			*/
+
+			console.log('******************concat(字符串1.....字符串n)******************');
+
+			var str = 'zhang';
+			console.log(str.concat('cool'));
+
+
+			console.log('******************substr(截取起始位置,截取几个字符)******************');
+
+			var str = 'zhang';
+
+			console.log(str.substr(1, 3)); //第一个是索引号 第二个是取几个字符
+
+			console.log('******************replace(被替换字符,替换为的字符	)******************');
+
+			// var str= 'zhangzhangzhang';
+			// console.log(	str.replace('z','D')); 
+			// 把所有的z换成D
+
+
+			var st = 'zhangzhangzhang';
+			while (st.indexOf('z') !== -1) {
+				st = st.replace('z', 'D')
+			}
+
+			console.log(st);
+
+
+			console.log('******************split(分隔符)******************');
+			// join 把数组转换成字符串
+			// split(分隔符)  把字符串换成数组,  取决于字符串里面的字符
+			var str = 'zhang,zhang,zhang';
+				
+			console.log(str.split('|'));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

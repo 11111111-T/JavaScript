@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js的使用方式</title>
+		<script type="text/javascript">
+			// 这是js单行注释
+			
+			/*
+				这是js多行注释
+				这是js多行注释
+				这是js多行注释
+				这是js多行注释
+				这是js多行注释
+				这是js多行注释
+			*/
+		   
+			alert('hello javascript')
+		</script>
+		<!-- 引入外部的js文件  标签的内部不要书写js代码 -->
+		<script type="text/javascript" src="../js/my.js"></script>	
+	</head>
+	<body>
+		
+		<!-- 
+			1.行内式  将js代码直接写在标签中
+			2.内嵌式  script标签  任意位置  推荐 head
+			3.外链式  独立的js文件  .js
+		 -->
+		 
+		 <a href="javascript: alert('hello javascript') ;">点击</a>
+		 <button type="button" onclick="javascript: alert('hello javascript') ;">点击</button>
+		 
+	</body>
+</html>

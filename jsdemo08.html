@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>选择结构练习</title>
+	</head>
+	<body>
+		
+		<!-- 
+			1.用户输入三位的会员卡号，如果三位卡号的和大于20 提示用户中奖  否则没有中奖
+			2.判定年份是平年还是闰年
+			3.编写程序输出一元二次方程的解    a  b  c
+		 -->
+		
+		<script type="text/javascript">
+			
+			// var carId = prompt("请输入三位数会员卡号")
+			// carId = carId*1;
+			// //分离三位数字的每一位  
+			// var gw = carId%10;
+			// var sw =parseInt(carId/10)%10;
+			// var bw =parseInt(carId/100);
+			// 
+			// var sum = gw+sw+bw;
+			// 
+			// //判定
+			// if(sum>20){
+			// 	console.log("中奖");
+			// }else{
+			// 	console.log("谢谢惠顾");
+			// }
+			
+			// var year = prompt("请输入年份")
+			// year = Number(year);
+			// if(year%4==0&&year%100!=0 || year%400==0){
+			// 	console.log("该年份是一个闰年");
+			// 	console.log("该年份是一个闰年，有 366 天");
+			// }else{
+			// 	console.log("该年份是一个平年365天");
+			// }
+			// 
+			// var num = Math.sqrt(4)
+			// console.log("sqrt:"+num);
+			
+			var a = prompt("请输入第一个参数a")
+			var b = prompt("请输入第二个参数b")
+			var c = prompt("请输入第三个参数c")
+			
+			var dlt = b*b -(4*a*c);
+			var res = Math.sqrt(dlt);
+			
+			if(dlt>0){
+				var x1 = (-b+res)/(2*a);
+				var x2 = (-b-res)/(2*a);
+				console.log("方程有两个不同的实根,x1="+x1+", x2="+x2);
+			}else if(dlt==0){
+				var x1 = -b/(2*a);
+				console.log("方程有两个不同的实根,x1=x2= "+x1);
+			}else{
+				console.log("方程没有实根");	
+			}
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>字符串操作</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var str = 'abaasdffggghhjjkkgfddsssss3444343'
+			console.log('1.字符串的长度');
+
+			for (var i = 0; i < str.length; i++) {
+				console.log('字符串的长度::' + str.length);
+			}
+
+
+			console.log('2.取出指定位置的字符， 如： 0, 3, 5, 9 等');
+
+			var s = str.split('')
+			console.log(s);
+			console.log(s[1]);
+			console.log(s[3]);
+			console.log(s[5]);
+			console.log(s[9]);
+
+
+			console.log('3.查找指定字符是否在以上字符串中存在， 如： i， c， b等');
+
+
+
+			for (var i = 0; i < str.length; i++) {
+				// console.log(str);
+				// console.log(str[32]==='3');
+				var cc
+				if (cc = str[i] === 'c') {
+					// console.log('有');
+					console.log('有:' + cc);
+					break
+					// continue
+				} else {
+					console.log('没有');
+
+				}
+
+			}
+
+
+			console.log('4.替换指定的字符， 如： g替换为22, ss替换为b等操作方法');
+
+
+			// var str1= str.replace('a', '22')
+			// console.log(str1);
+			// 这是全局替换
+			var str2 = str.replace(/a/g, '22')
+			console.log(str2);
+
+			console.log('5.截取指定开始位置到结束位置的字符串， 如： 取得1 - 5 的字符串');
+			var sub = str.substr(0, 3)
+			console.log(sub);
+
+
+			console.log('6.找出以上字符串中出现次数最多的字符和出现的次数');
+
+			// var sr = str.split('')
+			// console.log(sr); 
+			var sr = [];
+
+			for (var i = 0; i < str.length; i++) {
+				var index = -1
+				var j = 0
+				// console.log(str[i]);
+
+				do {
+					index = str.indexOf(str[i], index + 1);
+					if (index != -1) {
+						j++
+					}
+				} while (index != -1)
+				// 把字符串str中的字符赋给数组sr索引为j的数据，当多次循环后，会出现重复赋值的现象，
+				//后赋值的会把之前的赋值覆盖掉，但不影响我们找出字符出现最多的那个
+				sr[j] = str[i]
+			}
+			console.log(sr);
+			console.log("最多的字符是" + sr[sr.length - 1]);
+			console.log("次数是" + (sr.length - 1));
+
+
+			let ew = []
+			for (let i = 0; i < str.length; i++) {
+				let str9 = '@' + str[i] + '@'
+				ew +=str9
+			}
+			
+			console.log(ew);
+		</script>
+	</body>
+</html>

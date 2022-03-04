@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js中数据类型的转换</title>
+	</head>
+	<body>
+		
+		<!-- 
+			1.数值型  
+			2.字符串
+			3.布尔型
+		 -->
+		 <script type="text/javascript">
+		 	//  string -> number  boolean ->number
+			
+			var str = "";
+			// var str = "1a";  // 200px
+			// var str = "1.6"  // 取整
+			   
+			
+			
+			
+			// var temp = parseInt(str);  // a1  NaN  not a number
+			// var temp = parseFloat(str)
+			var temp = Number(str);
+			
+			//数学运算  隐式转换
+			// temp = str+0;  // 有string类型数据参与的加法运算 是字符串的拼接
+			temp = str-0;
+			
+			//boolean ->number
+			var b = false;
+			
+			//temp = parseInt(b);  NaN 
+			//temp = Number(b)
+			temp = b+0;
+			console.log(temp);
+			console.log(typeof temp);
+			
+			console.log("-----------------------");	
+			
+			// number->string  
+			
+			var num = 1;
+			console.log(num);
+			console.log(typeof num);
+			
+			//通过数学运算 
+			// temp = num+""
+			
+			//toString()
+			// temp =  num.toString();
+			
+			
+			// String()
+			// temp = String(num)
+			
+			
+			// boolean->string  
+			
+			// temp = b+""
+			// temp = b.toString()
+			// temp = String(b)
+			
+			
+			// number->boolean  非零即true
+			var num = -2;  
+			// temp = Boolean(num)
+		    //string->boolean  非空即true
+			// temp = Boolean(str)
+			// undefined ->boolean
+			
+			// temp = Boolean(undefined)  // false
+			temp = Boolean(null)  // false
+			
+			console.log(temp);
+			console.log(typeof temp);
+		 </script>
+	</body>
+</html>

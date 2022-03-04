@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>全局和局部作用域</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			let a = 10;
+			function fn() {
+				let a = 20
+				console.log(a); //20
+			}
+			fn(a)
+			console.log(a);//10
+			
+		</script>
+	</body>
+</html>

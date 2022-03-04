@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>双重循环</title>
+		<script type="text/javascript">
+			/*
+			双重for循环 语法结构
+			for (外层的初始化变量; 外层的条件表达式; 外层的操作表达式) {
+
+				for (里层的初始化变量; 里层的条件表达式; 里层的操作表达式) {
+					执行语句;
+				}
+			}
+			2.把里面的循环看做是外层循环的语句
+			3.外循环循环一次, 里面的循环执行全部
+			4.代码验证
+
+			
+			
+			五行五列五角星
+			var num = '';
+			//外层循环负责打印五行
+			for (var i = 1; i <= 5; i++) {
+				// console.log('这是外层循环的第' + i + '次');
+
+				//里层循环负责一行打印五个星星
+				for (var j = 1; j <= 5; j++) {
+					// console.log('这是里层循环的第' + j + '次');
+					num=num+'❤';
+				}
+				//如果一行打印完毕5个星星	就要另起一行 加\n;
+				num = num + '\n';
+			}
+
+			console.log(num);
+
+
+			n行n列五角星做法
+			var h = prompt("请输入行数")
+			var l = prompt("请输入列数")
+			var num = '';
+			//外层循环负责打印五行
+			for (var i = 1; i <= h; i++) {
+				// console.log('这是外层循环的第' + i + '次');
+
+				//里层循环负责一行打印五个星星
+				for (var j = 1; j <= l; j++) {
+					// console.log('这是里层循环的第' + j + '次');
+					num = num + '❤';
+				}
+				//如果一行打印完毕5个星星	就要另起一行 加\n;
+				num = num + '\n';
+			}
+
+			console.log(num);
+
+*/
+
+
+			/*
+						// 到三角五角星
+
+						var num = '';
+						//外层循环负责打印五行
+						for (var i = 1; i <= 10; i++) { //外层控制行数
+
+							//里层循环负责一行打印五个星星
+							for (var j = i; j <= 10; j++) {  //核心算法	j=i
+								num = num +  '❤';
+								// console.log('这是里层循环的第' + j + '次');
+							}
+							num = num + '\n';
+
+							//如果一行打印完毕5个星星	就要另起一行 加\n;
+						}
+						console.log(num);
+			*/
+
+			/*
+							// 正三角
+						var num = '';
+									//外层循环负责打印五行
+									for (var i = 1; i <= 10; i++) { //外层控制行数
+
+										//里层循环负责一行打印五个星星
+										for (var j = 1; j <= i; j++) {  //核心算法	j=i
+											num = num +  '❤';
+											// console.log('这是里层循环的第' + j + '次');
+										}
+										num = num + '\n';
+
+										//如果一行打印完毕5个星星	就要另起一行 加\n;
+									}
+									console.log(num);
+						*/
+
+
+
+
+			/*	//九九乘法口诀表
+			
+			var num = '';
+			for (var i = 1; i <= 9; i++) { //外层控制行数
+				// console.log('这是第'+i+'行');
+				for (var j = 1; j <= i; j++) { //核心算法 j<=i
+					// console.log('这是第'+j+'列');
+					
+					// num+='❤';
+					num += i+'*'+j+'='+i*j+'\t';
+						
+
+					// console.log('这是里层循环的第' + j + '次');
+				}
+				每行打印完要,另起一行 加\n;
+				num += '\n';
+			}
+			console.log(num);
+*/
+
+
+			// for循环小结
+		</script>
+
+
+	</head>
+	<body>
+	</body>
+</html>

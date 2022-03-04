@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>07--班长请客吃饭</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var qian = parseInt(prompt('口袋还有xxxx快'))
+
+			switch (true) {
+				case qian <= 1000 && qian > 500:
+					console.log('请大家吃棒棒糖');
+					break;
+					
+				case qian < 1500 && qian >= 1000:
+					console.log('请大家喝饮料');
+					break;
+					
+				case qian < 2000 && qian >= 1500:
+					console.log('请大家吃快餐');
+					break;
+					
+				case qian >= 2000:
+					console.log('请大家吃西餐');
+					break;
+					
+				default:
+					console.log('班长下次把钱带够');
+					break;
+			}
+
+
+
+			// if (qian <= 1000 && qian > 500) {
+			// 	console.log('请大家吃棒棒糖');
+			// } else if (qian < 1500 && qian >= 1500) {
+			// 	console.log('请大家喝饮料');
+			// } else if (qian < 2000 && qian >= 1000) {
+			// 	console.log('请大家吃快餐');
+			// }else if (qian >= 2000) {
+			// 	console.log('请大家吃西餐');
+			// }else{
+			// 	console.log('班长下次把钱带够');
+			// }
+		</script>
+	</body>
+</html>

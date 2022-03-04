@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 求[12,34,2,5,76]数组中最大值 -->
+		<script type="text/javascript">
+			
+			var array = [12,34,2,5,76];
+			var max =array[0];
+			for (var i = 1; i < array.length; i++) {
+				if(max<array[i]){
+					max = array[i];
+				}
+			}
+			console.log(max);
+		</script>
+	</body>
+</html>

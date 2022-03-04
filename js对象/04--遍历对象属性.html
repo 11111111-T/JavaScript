@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>遍历对象</title>
+		<script type="text/javascript">
+			
+			var obj={
+				name:'nan',
+				sex:'女',
+				age:18,
+				skill:function(){
+					
+				}
+			}
+			// console.log(obj);
+			
+			
+			/*
+			 遍历对象
+			for...in循环  
+			 语法格式::
+			 for(变量 in 对象){
+			 			   
+			 }
+			 
+			*/
+		   
+			for(var k in obj){
+				
+				console.log(k);	//k是变量  输出   得到的是属性名
+				console.log(obj[k]); //obj[k] 得到的是属性值 
+			}
+			
+			//for ...in 里面的变量  我们喜欢写 k  或者 key  
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

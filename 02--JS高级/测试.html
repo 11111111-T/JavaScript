@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// var a=undefined; b=NaN
+			// console.log(a+b);
+
+			// console.log(NaN === NaN);
+
+			/*
+				var a = 10,
+					b = 20,
+					c = 30;
+				console.log(++a);
+				console.log(a++); //11  a++ 后面的有a 就加1
+				
+				e=++a+(++b)+(c++)+a++;
+				console.log(++a); //13
+				console.log(++b); //21 
+				console.log(c++); //30
+				console.log(a++); //13
+				console.log(e); //77
+				*/
+
+			function DateDemo() {
+				var d, s = "今天日期是：";
+				d = new Date();
+				s += d.getMonth() + 1 + "/";
+				s += d.getDate() + "/";
+				s += d.getFullYear();
+				return s;
+			}
+			var c= DateDemo()
+			
+			console.log(c);
+		</script>
+	</body>
+</html>

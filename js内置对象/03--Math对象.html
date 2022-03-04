@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Math</title>
+		<script type="text/javascript">
+			//Math 数学对象 不是一个构造函数,  所以我们不需要new 来调用  而是直接使用里面的属性和方法即可	
+			console.log(Math.PI); //一个属性 圆周率
+			console.log(Math.max(1, 99, 3)); //99
+			console.log(Math.max(-1, -99, -3)); //-1
+
+			console.log(Math.max(-1, -99, 'kk')); //NaN
+
+
+			//如果里面没有参数	结果是infinity 
+			console.log(Math.max()); //NaN
+
+
+
+			console.log('*****************利用对象 Math.PI*****************');
+			// 利用对象	封装自己的数学对象  里面有 PI 最大值最小值
+
+			// 多写  pink 159
+
+			var myMath = {
+				PI: 3.141592653,
+				max: function() {
+					var max = arguments[0];
+					for (var i = 1; i < arguments.length; i++) {
+						if (arguments[i] > max) {
+							max = arguments[i];
+						}
+					}
+					return max;
+				},
+				min: function() {
+					var min = arguments[0];
+					for (var i = 1; i < arguments.length; i++) {
+						if (arguments[i] < min) {
+							min = arguments[i];
+						}
+					}
+					return min;
+				}
+			}
+
+
+			console.log(myMath.PI);
+
+			console.log(myMath.max(1, 5, 9));
+			console.log(myMath.min(1, 5, 9));
+			// console.log(myMath['PI']);
+
+
+			console.log('*****************绝对值方法	Math.abs()*****************');
+
+
+			console.log(Math.abs(-10)); //10
+			console.log(Math.abs('-1')); //10	隐式转换  会把字符串类型-1转换成数字型
+			console.log(Math.abs(10)); //10
+			console.log(Math.abs('nan')); //NaN
+
+
+			console.log('*****************向下取整	Math.floor()*****************');
+			// floor 地板
+			// 往下取整,往最下值取
+			console.log(Math.floor(1.1)); //1
+			console.log(Math.floor(1.9)); //1
+
+
+			console.log('*****************向上取整	Math.ceil()*****************');
+			// ceil 天花板
+			// 往上取整,往最大值取
+			console.log(Math.ceil(0.1)); //1
+			console.log(Math.ceil(1.1)); //2
+
+
+			console.log('*****************四舍五入	Math.round()*****************');
+			//四舍五入				其他数字都是四舍五入,  但是  .5 特殊 他往大了取
+			console.log(Math.round(0.5)); //1
+			console.log(Math.round(1.1)); //1
+			console.log(Math.round(0.4)); //0
+			console.log(Math.round(-1.5)); //-1 这个结果是-1
+			console.log(Math.round(-2.9)); //-3
+
+
+
+			console.log('*****************随机数	Math.random()*****************');
+			// 1. math对象随机数方法    random(); 返回一个随机的小数   0<=x<1
+			// 2. 这个方法不跟参数
+			// 3. 代码验证
+			console.log(Math.random()); //1
+
+
+			// 4. 我们想要两个数之间的随机整数  并且 包含这两个整数
+			// Math.floor(Math.random()*(max-min+1))+min;
+
+			function myrandom(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			// console.log(函数名(1,20));
+			console.log(myrandom(10, 20));
+
+
+			// console.log('*****************随机数	Math.random()*****************');
+			
+			
+			// for(i=0;i<50;i++){
+			// 	num = Math.floor(Math.random() * 11 + 10);
+			// 	console.log(num);
+			// }
+			
+			console.log('*****************随机点名案例::Math.random()*****************');
+			// 5. 随机点名
+			var F4=['张三','李四','赵四','刘能','小沈阳','宋小宝'];
+			// console.log(Math.random(F4));
+							// 调用函数,(索引号)
+			console.log(F4[myrandom(0,F4.length-1)]);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

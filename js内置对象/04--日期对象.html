@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>date日期对象</title>
+		<script type="text/javascript">
+			// Date() 日期对象  是一个构造函数  必须使用new  来调用创建我们的日期函数
+			var arr = new Array(); //创建一个数组对象
+
+			var obj = new Object() //创建了一个对象实例
+
+			// 1. 使用Date()  如果没有参数  返回当前系统时间
+			var date = new Date();
+			console.log(date);
+
+
+			// 2. 参数常用的写法  数字型  2019,10,01  或者是 字符型的 '2019-10-1 8:8:8'
+			var date1 = new Date(2019, 10, 1)
+			console.log(date1); //返回的是11月不是10月
+
+			var date2 = new Date('2019-10-1 8:8:8')
+			console.log(date2);
+
+
+			console.log('**********获取当年(月 天 星期X 小时分钟)::getXXXXXX**************');
+
+			// 3. 日期格式化
+			var date3 = new Date(); //Date对象必须用new来实例化
+			console.log(date3.getFullYear()); //返回当前年份  2021
+
+			console.log(date3.getMonth() + 1); //返回当前的月份 但是返回的月份比实际的月份小1; (+1之后才可以);
+
+			console.log(date3.getDate()); //返回的是当前X号   
+
+			console.log(date3.getDay()); //返回的是当前星期X		周六返回的是6,  但是周日返回的是0
+
+
+			//我们写一个2021年10月20日星期三
+
+			var year = date3.getFullYear();
+			var moth = date3.getMonth() + 1;
+			var ri = date3.getDate();
+			var day = date3.getDay();
+			var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'] //用数组来帮助实现 
+			console.log(year + '年' + moth + '月' + ri + '日' + '星期' + arr[day]);
+
+
+			console.log(date3.getHours()); //返回的是当前X小时
+
+			console.log(date3.getMinutes()); //返回的是当前X分钟
+
+			console.log(date3.getSeconds()); //返回的是当前X秒
+
+
+
+			console.log('**********封装一个函数返回当前 时 分 秒***********');
+			//格式     08:08:08
+			var h;
+			var m;
+			var s;
+			var getTime;
+
+			function Time() {
+				// 第一步实例化
+				getTime = new Date;
+				h = getTime.getHours();
+					h = h < 10 ? '0' + h : h
+				m = getTime.getMinutes();
+					m = m < 10 ? '0' + m : m
+				s = getTime.getSeconds();
+					s = s < 10 ? '0' + s : s
+
+				return h + ':' + m + ':' + s;
+
+			}
+			console.log(Time());
+			
+			
+			
+			console.log('*************获取Date总的毫秒数*************');
+			// 获取日期的总的毫秒数
+			// 不是当前时间的毫秒数   而是距离1970年1月1日过了多少毫秒
+			
+			// 1. 通过 valueOf()  getTime()
+			var date =new Date();
+			console.log(date.valueOf());	// 返回毫秒数
+			
+			console.log(date.getTime());	
+			
+			
+			// 2. 简单写法
+			var date1 =+new Date(); +new Date() // 返回的就是总的毫秒数
+			
+			console.log(date1);
+			
+			
+			// 3. H5  新增的写法 获得总的毫秒数
+			
+			console.log(Date.now());
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>构造函数</title>
+		<script type="text/javascript">
+			// 我们为什么要构造函数?
+			// 就是因为我们前面两种创建对象的方式一次只能创建一个对象
+
+			var ldh = {
+				name: '刘德华',
+				age: 55 + '岁',
+				skill: function() {
+					console.log('冰雨');
+				}
+			}
+
+
+			var zxy = {
+				name: '张学友',
+				age: 58 + '岁',
+				skill: function() {
+					console.log('李香兰');
+				}
+			}
+			/*
+			因为我们一次创建一个对象,里面很多的属性和方法是大量相同的 我们只能复制;
+			
+			因此我们可以利用函数的方法  重复这些相同的代码  我们就把这个函数称为(构造函数);
+			
+			又因为这个函数不一样, 里面封装的不是普通代码,而是 对象;
+			
+			(构造函数) 就是把我们对象里面一些相同的属性和方法抽象出来封装到函数里面;
+			*/
+
+
+			/*
+			利用构造函数 创建对象
+			我们需要创建四大天王的对象	相同属性::名字 ,年龄,性别  相同的方法::唱歌 演电影
+			构造函数的语法格式::
+			
+			function 构造函数名() {
+				this.属性 = 值;
+				this.方法 = function() {
+			
+				}
+			}
+			new 构造函数名();
+			*/
+
+
+			// 1. 构造函数名首字母大写 规范
+			// 2. 构造函数不需要return 就可以返回结果
+			// 3. 我们调用构造函数  必须使用 new
+			// 4. 只要调用了 构造函数  就创建了一个对象 Object
+			// 5. 属性和方法前面必须添加	this
+			console.log('********案例::四大天王***********');
+
+			function Wang(name, age, sex) {
+				this.name = name;
+				this.age = age;
+				this.sex = sex;
+				this.skill = function(dd) {
+
+					console.log(dd);
+				}
+			}
+			var ldh = new Wang('刘德华', 55 + '岁', '男'); //调用函数返回的是一个对象 Object
+			console.log(ldh);
+			console.log(ldh.name);
+			console.log(ldh['name']);
+			ldh.skill('冰雨');
+
+			var zxy = new Wang('张学友', 58 + '岁', '男') //调用函数返回的是一个对象 Object
+			console.log(zxy);
+			console.log(zxy.name);
+			console.log(zxy['name']);
+			ldh.skill('遥远的她');
+
+
+
+
+
+
+
+
+
+			console.log('********案例::王者荣耀英雄***********');
+
+							// 相同属性,
+			function Hero(name, type, blood) {
+				this.name = name;
+				this.type = type;
+				this.blood = blood;
+										//感觉随便打打也会显示方法
+				this.attack = function(dajia) {
+					console.log(dajia);
+				}
+
+			}
+
+			var LP = new Hero('廉颇', '力量型', 500 + '血量', )
+			console.log(LP);
+			console.log(LP.name);
+			console.log(LP['type']);
+			console.log(LP.blood);
+			LP.attack('近战');
+
+
+
+			var HY = new Hero('后羿', '射手型', 100 + '血量', )
+			console.log(HY);
+			console.log(HY.name);
+			console.log(HY['type']);
+			console.log(HY['blood']);
+			HY.attack('远程');
+			
+			
+			
+			
+			
+			
+			// 二. 对象 (特指某一类) 是一个具体事物  后羿 =={name: "后羿", type: "射手型", blood: "100血量", attack: ƒ}
+			// 构造函数是泛指的一大类::
+			
+			 // 我们利用构造函数创建对象的过程我们也称为对象的实例化;
+			 
+			 
+			console.log(HY.name);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

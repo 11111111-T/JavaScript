@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 逻辑与(&&)全真为真,一假全假
+			console.log(1 > 2 && 1 < 9) //false
+			console.log(1 < 2 && 1 < 9) //true
+
+
+			// 逻辑或(||)全假才为假,只要有一侧为true,结果就为true
+			console.log(1 > 2 || 1 < 9) //true
+			console.log(1 > 2 || 1 > 9) //false
+			
+			
+			//逻辑非 (!)取反
+			console.log(!false) //true
+			console.log(!true) //false
+			console.log(!(1 > 2 || 1 > 9)) //true
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 根据《省电网销售电价表》，居民生活用电按3个梯度收费：
+			月用电量150千瓦时及以下部分，每千瓦时0.4463元，
+			151—400千瓦时部分为0.4663元，
+			401千瓦时以上部分为0.5663元，
+			请编写程序，当输入用户的用电量时，计算出所需付的费用 
+		-->
+		
+		<script type="text/javascript">
+			
+			var num = prompt("请输入用电量")
+			
+			//根据用电量 选择合适的计方式
+			
+			if(num<=150){
+				var money = num*0.4463;
+				console.log("本月电费为:"+money);
+			}else if(num<=400){
+				var money = 150*0.4463+(num-150)*0.4663;
+				console.log("本月电费为:"+money);
+			}else{
+				var money = 150*0.4463+250*0.4663+(num-400)*0.5663;
+				console.log("本月电费为:"+money);
+			}
+			
+		</script>
+	</body>
+</html>

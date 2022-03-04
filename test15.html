@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 输出1000以内的水仙花数，
+			例子：如果一个三位数 abc=a *a *a+b * b* b+c* c* c 则该数字是一个水仙花数 
+		-->
+		<script type="text/javascript">
+			
+			for (var i = 100; i < 1000; i++) {
+				
+				var gw = i%10;
+				var sw = (parseInt(i/10))%10
+				var bw = parseInt(i/100)
+				
+				if(((gw*gw*gw)+(sw*sw*sw)+(bw*bw*bw))==i){
+					console.log(i);
+				}
+				
+			}
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

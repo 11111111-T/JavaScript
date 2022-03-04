@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var num = prompt("请输入一个数字");
+
+			num = num * 1;
+			if (isNaN(num)) {
+				console.log("请输入一个正确的数字");
+			} else {
+				if (num % 2 == 0) {
+					alert("")
+				}
+			}
+
+
+			/*第一题 奇数偶数
+			var num = prompt("请输入一个数字");
+			console.log(typeof num);
+			console.log(num = num*1);//用隐式转换的方法,转换成数字型
+			// console.log(parseInt(num));
+
+				if ((num/2)%1) {
+					console.log("这是一个奇数");
+				} else {
+					console.log("这是偶数");
+				}
+			*/
+
+
+			/*第二题
+			var zb = prompt("请输入两个数字");
+			var yb = prompt("请输入两个数字");
+			// console.log(typeof zb);
+			// console.log(typeof yb);
+			console.log(zb = zb * 1);
+			console.log(yb = yb * 1);
+
+			if (zb > yb) {
+				alert(zb + '>' + yb);
+			} else if (zb < yb)
+			{
+				alert(zb + '<' + yb);
+			} else {
+				alert("请输入正确的数字");
+			}
+			
+			{这是错误的例子
+			// var num = zb > yb;
+			// console.log(num);
+
+			// var num1 = zb < yb;
+			// if (num) {
+			// 	console.log("zb>yb");
+			// }
+			// else{
+			// 	console.log("zb<yb");
+			// }}
+			*/
+
+			/*第三题
+		   var repot=prompt("请输入成绩");
+			repot =repot*1;
+			// console.log(typeof repot);
+			if(repot>=90){
+				alert("优秀");
+			}
+			else if(repot>=80){
+				alert("良好");
+			}
+			
+			else if(repot>=70){
+				alert("中等");
+			}
+			else if (repot>=60){
+				alert("及格");
+			}
+			else{
+				alert("不及格")
+			}
+			*/
+
+			/*第四题
+			var year = prompt("请输入年份");
+
+			year = year * 1;
+			// console.log(typeof year);
+
+			if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+				alert("这是闰年366天");
+			} else {
+				alert("这是平年365天");
+			}
+			
+*/
+
+
+			/*第五题
+			var day = prompt("请输入星期x");
+			day = day * 1; //转换为数字型
+
+			switch (day) {
+				case 1:
+					console.log("体能");
+					break;
+
+				case 2:
+					console.log("日常基本功训练");
+					break;
+
+				case 3:
+					console.log("体能");
+					break;
+
+				case 4:
+					console.log("半场5v5阵地");
+					break;
+
+				case 5:
+					console.log("全场5v5");
+					break;
+
+				case 6:
+					console.log("休息");
+					break;
+
+				case 7:
+					console.log("学习");
+					break;
+
+				default:
+					console.log("....");
+			}
+			*/
+
+			/*第六题
+			var lc = prompt("请输入公里数");
+			lc=lc*1;//给路程转换成数字型
+			var	q =7+3*(lc-2); //定义个钱的变量式子
+			if(lc<=2){
+				alert("7元")//起步价包含2公里内都是7元
+			}
+			else if(q){
+				alert('一共'+q+'元')
+			}
+			
+			
+			三目运算	
+			
+			var q =lc<=2?"车费为7元":(lc-2)*7+3;
+			alert(q);
+			
+			*/
+
+
+
+			/*第七题
+			var year = prompt("请输入年份");
+			year = year * 1;
+			if (year % 4 == 0 && year % 100 != 0 || year %400==0) {
+				alert("这是闰年366天")
+			} else {
+				alert("这是平年365天")
+			}
+			*/
+
+
+
+			/*第八题
+			var sex = prompt("请输入你的性别"); 
+
+			console.log(typeof sex);
+			kg = kg * 1;
+			console.log(typeof kg);
+
+//先检查性别找到case 性别后带入进去计算,不是则跳过
+			switch (sex) {
+
+				case '女':
+					var kg = prompt("请输入你的体重"); 		//
+					if (sex == '女', kg < 50) {
+						alert("输血200ml")
+					} else if (sex == '女', kg >= 50) {
+						alert("输血250ml")
+					} else {
+						alert("不可能出现第三种性别")
+
+					}
+					break;
+
+				case '男':
+					var kg = prompt("请输入你的体重");
+					if (sex == '男', kg < 60) {
+						alert("输血250ml")
+					} else if (sex == '男', kg >= 60) {
+						alert("输血300ml")
+					}
+					break;
+			}
+			*/
+
+
+			/*第九题
+		   
+		   var wd=prompt("请输入温度");
+		   if(wd>=26){
+			   console.log("开启制冷");
+		   }
+		   else if( wd<=10){
+			   console.log("开启制热");
+		   }
+		   else{
+			   console.log("开启送风模式");
+		   }
+		   */
+
+
+			/*第十题
+			var dl = prompt("请输入用电量");
+			dl = dl * 1;
+
+			// 第一梯度,小于150及以下, 0.4463
+
+			var dyq = dl * 0.4463;
+
+			var drq = dl * 0.4463+(dl-150)*0.4663;
+
+			var drq = dl * 0.4463+(dl-150)*0.4663+(dl-400) * 0.5663;
+
+			if (dl <= 150) {
+				alert('这个月你花了' + dyq + '元')
+			} else if (dl <= 400) {
+				alert('这个月你花了' + drq + '元')
+			} else if (dl >= 401) {
+				alert('这个月你花了' + dsq + '元')
+			} else{
+				alert("那你还挺厉害的用电")
+			}
+			*/
+
+			// // 第十一题
+			// var age = parseInt(prompt("请输入你的年龄"));
+			// var sg = parseInt(prompt("请输入你的身高"));
+
+
+			// if (age < 18) {
+
+			// 	var p = prompt("请输入你的票型");
+			// 	// "硬座"
+			// 	if (p == "硬座") {
+			// 		if (sg < 120) {
+			// 			alert("硬座免票 0元")
+			// 		} else if (120 <= sg && sg < 150) {
+			// 			alert("硬座半票 50元")
+
+			// 		} else if (sg > 150) {
+			// 			alert("硬座全票 100")
+
+			// 		}
+			// 	}
+
+			// 	// 硬卧
+			// 	else if (p == "硬卧") {
+			// 		if (sg < 150) {
+			// 			alert("硬卧半票 140元")
+			// 		} else if (sg >= 150) {
+			// 			alert("硬卧全票 190元")
+			// 		}
+
+			// 	}
+
+			// };
+
+
+			// if (age >= 18) {
+			// 	var p = prompt("请输入你的票型");
+			// 	if (p == "硬卧") {
+			// 		alert("硬卧190元")
+
+			// 	} else if (p == "硬座") {
+			// 		alert("硬座100")
+			// 	}
+			// }
+
+
+
+
+
+			// 	// 十二题
+			// var num1 = prompt("请输入数字1");
+			// var num2 = prompt("请输入数字2");
+			// num1 = num1 * 1;
+			// num2 = num2 * 1;
+
+			// if (num1 > num2) {
+			// 	alert(num1 + '>' + num2);
+			// } else if (num1 < num2) {
+			// 	alert(num1 + '<' + num2);
+			// } else {
+			// 	alert("请输入正确的数字");
+			// }
+
+
+
+			// 			当dt > 0;
+			// 			方程有2个不相等的实数根
+			// 			当dt = 0;
+			// 			方程有2个相等的实数根
+			// 			当dt < 0;
+			// 			方程无实数根
+			// dt = b * b - 4 * a * c;
+
+			// var a = prompt("请输入数字1")
+			var a = parseFloat(prompt("请输入数字1"));
+			a = a * 1
+
+			// var b = prompt("请输入数字2")
+			var b = parseFloat(prompt("请输入数字2"));
+			b = b * 1
+
+			// var c = prompt("请输入数字3")
+			var c = parseFloat(prompt("请输入数字3"));
+			c = c * 1
+
+
+			var dt = b * b - 4 * a * c;
+
+			if (dt > 0) {
+				var x1 = (-1 * b + Math.sqrt(dt)) / (2 * a);
+				var x2 = (-1 * b - Math.sqrt(dt)) / (2 * a);
+				alert("第一个解x1:" + x1);
+				alert("第一个解x2:" + x2);
+
+			} else if (dt == 0) {
+				var x = (-1 * b + Math.sqrt(dt)) / (2 * a);
+				alert("第一个解x:" + x)
+
+			} else {
+				alert("无实数根")
+			}
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

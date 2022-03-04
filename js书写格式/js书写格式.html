@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js书写格式</title>
+		<!-- CSS书写格式
+		1.行内样式：写在标签内部
+		2.内嵌样式(内联样式)：写在head标签中
+		3.外联样式：写在单独的.css文件中再导进来 -->
+
+		<!-- js书写格式
+		1.行内样式：写在标签内部
+		2.内嵌样式(内联样式)：写在head标签中
+		3.外联样式：写在单独的.js文件中再导进来 -->
+		<!-- <script type="text/javascript">
+			alert('楠楠')
+		</script> -->
+
+
+
+
+		<!-- 
+		内嵌式
+			<script type="text/javascript">
+			var oDiv = document.querySelector("div")
+			var text = oDiv.inerText;
+			alert(text)
+		</script>
+
+		   
+1. 如果想将JavaScript写入head标签中，并且需要在JavaScript代码中操作界面上的元素，
+那么必须加上window.onload = function() {操作界面元素的JavaScript}
+
+2. window.onload等界面上所有的代码执行完成再执行{}中的代码
+		 -->
+
+
+
+
+
+		<!-- 		外链式
+<script src="书写.js" type="text/javascript" charset="utf-8"></script> -->
+	</head>
+	<body>
+		<div>nannan</div>
+		<!-- 行内样式
+	 <div onclick="alert('楠楠')">nannan</div> -->
+
+
+
+
+
+
+
+		<!-- 在body中写不需要加window.onload = function() 因为网页遵循从上到下规律 -->
+
+		<script type="text/javascript">
+			var oDiv = document.querySelector("div");
+			var text = oDiv.innerText;
+			alert(text);
+		</script>
+
+	</body>
+</html>

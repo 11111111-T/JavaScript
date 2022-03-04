@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<script type="text/javascript">
+			// 案例:
+			// 1.实现100以内偶数和奇数的和分别是多少
+			//100以内的数
+			/*
+			var os=0;//偶数
+			var js=0;//奇数
+			
+			
+			for(var z=1;z<=100;z++){
+				
+				//偶数的判定条件
+				if(z%2==0){
+					os=os+z;
+				}
+				else{
+					js=js+z;
+				}
+			}
+			console.log("偶数和为"+os);
+			console.log("奇数和为"+js);
+			*/
+
+
+
+
+
+
+			// 2.实现9*9乘法表
+			/*
+						var z = '';
+
+						// 外层循环控制行数	
+						for (var y = 1; y <= 9; y++) {
+
+							// 里层循环控制每一行的个数 j<=y
+							for (var j = 1; j <= y; j++) {
+								// 1x2=2
+								// z = z + '*';
+								
+								// z=z+j+'×'+y+'＝'+y*j+'\t';
+								//简洁一些使用+=;
+								z+=j+'×'+y+'＝'+y*j+'\t';
+							}
+							z += '\n';
+						}
+
+						console.log(z);
+		
+*/
+
+			// 3.实现100以内能被3整除的数字的和
+			/*
+			var h=0;
+			for(var z=1;z<=100;z++){
+				if(z%3==0){
+					
+					// h=z+h;
+					h+=z;
+				}
+			
+				
+			}
+			console.log("和为"+h);
+*/
+
+
+			// 4.实现1-20数字的平均值
+			/*
+			var p=0;
+			var j=0;
+			for(var z=1;z<=20;z++){
+				
+				p=(p+z);
+				j=p/20
+			}
+			console.log("总共和为:"+j);
+			*/
+
+
+			// 5.求某个班级5个学生的总成绩和平均成绩(用户输入成绩)
+
+
+			/*
+			var o=parseFloat(prompt("第一位学生的成绩"));//转换为数字型
+			var t=parseFloat(prompt("第二位学生的成绩"));//转换为数字型
+			var s=parseFloat(prompt("第三位学生的成绩"));//转换为数字型
+			var f=parseFloat(prompt("第四位学生的成绩"));//转换为数字型
+			var w=parseFloat(prompt("第五位学生的成绩"));//转换为数字型
+			
+			var z=0; //定义总成绩
+			var p=0; // 定义平均成绩
+			
+			
+			// i为5个同学
+			for(var i=1;i<=5;i++){
+				//五个同学相加
+				z=o+t+s+f+w;
+				// 除法求值
+				p=z/5;
+			}
+			console.log("总成绩"+z);
+			console.log("平均成绩"+p);
+			*/
+
+
+			// 3.甲 乙 丙 丁 加工零件，加工的总数是370，如果甲加工的零件数多10，如果乙加工的零件数少20，如果丙加工的零件数乘以2，
+			// 如果丁加工的零件数除以2，四个人的加工数量相等，求甲乙丙丁各自加工多少个零件
+
+/*
+			for(var i=1;i<370;i++){
+				if((i-10)+(i+20)+(i/2)+(i*2)==370){
+					
+					console.log("甲" + (i-10));
+					console.log("乙" + (i-20));
+					console.log("丙" + (i*2));
+					console.log("丁" + (i/2));
+					break;
+				}
+		
+			}
+			*/
+		   
+		   // 这个会引发浏览器卡顿
+		   /*
+				for (var j = 0; j <= 370; j++) {
+							for (var y = 0; y <= 370; y++) {
+								for (var b = 0; b <= 370; b++) {
+									for (var d = 0; d <= 370; d++) {
+										var sum = j + y + b + d;
+										if (sum == 370) {
+
+											if (j + 10 == y - 20) {
+
+												if (y - 20 == b * 2) {
+
+													if (b * 2 == d / 2) {
+														console.log("甲" + j);
+														console.log("乙" + y);
+														console.log("丙" + b);
+														console.log("丁" + d);
+														break;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+			*/
+
+
+
+
+			// 4.鸡兔同笼一共50只,脚160,求鸡多少只,兔子多少只!  
+
+
+
+			/*
+			for (var t = 1; t <= 50; t++) {
+				for (var j = 1; j <= 50; j++) {
+
+					if (j + t == 50 && 2 * j + 4 * t == 160) {
+
+						console.log("鸡有:" + j + "只");
+						console.log("兔有:" + t + "只");
+					}
+				}
+			}
+
+*/
+
+
+			// 5.输出100以内的素数,素数是只能被1和自身整除的数    
+
+			/*
+						for (var s = 2; s <= 100; s++) {
+
+							var a = 0;
+
+							for (var z = 2; z <= s; z++) {
+
+
+								if (s % z == 0) {
+									a+=1
+									// a = a + 1;
+
+								}
+
+							}
+							if (a <= 2) {
+
+								console.log(s);
+							}
+						}
+
+						*/
+
+
+
+
+
+			// 6.输出20以内的偶数和奇数的个数
+
+			/*
+						var num1 = 0;
+						// num1 = toString(num1);
+						var num2 = 0;
+						// num2 = toString(num2);
+						for (var i = 1; i <= 20; i++) {
+							if (i % 2 == 0) {
+								num1 ++;
+								//在循环内写console可以显示 2-4...偶数
+								// console.log(num1)
+							}
+							 
+							 else {
+								num2 ++;
+								//在循环内写console可以显示 2-4...偶数
+								// console.log(num1)
+							}
+						}
+						
+						
+						//在循环外写console可以显示 多少个偶数
+						console.log(num1);
+						console.log(num2);
+			*/
+
+
+
+
+
+
+			// 7.输出1000以内的水仙花数，例子:如果一个三位数abc=a *a *a+b * b* b+c* c* c则该数字是一个水仙花数
+
+
+			/*
+						for (var i = 100; i <= 999; i++) {
+							//得到这个i的每一个位
+							
+							var unit = i % 10;
+							var decade = parseInt(i % 100 / 10);
+							var hundreds = parseInt(i / 100);
+							
+							//验证是否符合水仙花数的特点
+							if (Math.pow(hundreds, 3) + Math.pow(decade, 3) + Math.pow(unit, 3) == i) {
+								console.log(i);
+
+							}
+						}
+			*/
+
+
+
+			//8. 分别计算1到100的偶数和奇数和
+
+
+			/*
+						var os = 0;
+						var js = 0;
+						
+						
+						for (var i = 1; i <= 100; i++) {
+							if (i % 2 == 0) {
+								os = os + i
+							} else {
+								js = js + i;
+							}
+						}
+						console.log("偶数和:" + os);
+						console.log("奇数和:" + js);
+						*/
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>05--this的指向</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			console.log(' < !--第一-- > ');
+			var a = 10;
+			var obj = {
+				a: 120,
+				method: function() {
+					var bar = function() {
+						console.log(this.a); //10   this 指向的是window  全局var a=10
+					};
+					bar();
+					return this.a  
+				}
+			}
+			console.log(obj.method()); //120 上面的函数返回的是this.a obj调用了method函数 所以 a指向obj中的a=120
+			
+		console.log(' < !--第二-- > ');
+			
+			
+		</script>
+	</body>
+</html>

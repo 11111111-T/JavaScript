@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>简易计算器</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var xuanxiang = prompt("欢迎使用计算机: \n1.加法运算, \n2.减法运算, \n3.乘法运算, \n4.除法运算")
+			var one, two,sum;
+			// while (true) {
+				switch (parseInt(xuanxiang)) {
+					case 1:
+						// let one = parseInt(prompt('第一个数据'))
+						// let two = parseInt(prompt('第二个数据'))
+						san();
+						sum=(one + two)
+						// alert(one + two)
+						break;
+					case 2:
+						// let ones = parseInt(prompt('第一个数据'))
+						// let twos = parseInt(prompt('第二个数据'))
+						san()
+						// alert(one + two)
+						sum=(one + two)
+						break;
+					case 3:
+						// let oness = parseInt(prompt('第一个数据'))
+						// let twoss = parseInt(prompt('第二个数据'))
+						san()
+						// alert(one + two)
+						sum=(one + two)
+						break;
+					case 4:
+						// let onesss = parseInt(prompt('第一个数据'))
+						// let twosss = parseInt(prompt('第二个数据'))
+						san()
+						// alert(one + two)
+						sum=(one + two)
+						break;
+					default:
+						alert('请输入正确的序号')
+						break;
+				}
+				alert("输出的结果:"+sum)
+				
+			// }
+
+			function san() {
+				one = parseInt(prompt('第一个数据'))
+				two = parseInt(prompt('第二个数据'))
+			}
+		</script>
+	</body>
+</html>

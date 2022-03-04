@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>测试题</title>
+		<script type="text/javascript">
+			/*
+			// 1.编程实现用户输入出生日期 如“2021-12-08，计算用户出生到现在活的天数，同时计算一下用户距离100岁还有多少天。
+			var SR = new Date("2000-10-21");
+			var today = new Date(); //定义个新的
+
+			var num = parseInt((today.getTime() - SR.getTime()) / (1000 * 24 * 3600));
+			var year = Math.round(num / 365)
+			var yi = 100 - year;
+
+			console.log("从出生到今天活了" + num + "天");
+			console.log("今年" + year + "岁");
+			console.log('用户距离100岁还有' + yi + '岁');
+			*/
+
+
+
+
+			// 2.打印输出第五个能被3,5,7同时整除的整数
+			/*
+			var num = 0;
+			var wu =0;
+			 while(1){
+				 if((num%3==0)&&(num%5==0)&&(num%7==0)){
+					 if(wu==5){
+						 console.log(wu);
+						 break;
+					 }
+					 wu++;
+				 // num++;
+					 
+				 }
+				num++;
+			 // wu++;
+			 }
+			 console.log(num);
+			 // console.log(wu);
+			*/
+
+
+
+
+
+			// 3.将字符串'area input html css'，每个单词的首字母变为大写
+			
+			/*
+			var str = 'area input html css';
+			//使用split  分割字符串  得到字符串数组
+			var st = [];
+			var array=st.split('');
+			console.log(array.toString());
+			var newarr = [];
+			
+			// 遍历数组
+			for(var i=0;i<newarr.length;i++){
+				// 截取第一个字符串首字母
+				newarr[i]=array[i].substr(0,1).toUpperCase()+array[i].substring(1);
+			}
+			
+			console.log(newarr);
+*/
+
+
+
+
+
+			// 4.编写函数生成一个4位随机验证码，验证码可以由数字，字母组合而成
+			
+			/* 订正
+			*/
+			var code=['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','j','h','i','g','k','l','m','n','o','p','q','r','s','t','u','v','w','x','v','z'W]
+			
+			var str="";
+			for(var i=0;i<4;i++)
+			{
+				var index=parseInt(Math.random()*36) ;
+				str+=code[ran];
+			}              W
+			console.log('code'+str);
+			
+
+
+
+
+
+			// 5.编写函数实现用户输入一个毫秒值，返回该毫秒值对应的时间按照xx年xx月xx日 hh:mm:ss的形式返回
+				
+					/*订正
+					var date = new Date;
+					
+					var num=prompt('请输入毫秒值');
+					var date=num/(3600*24*1000);
+					console.log(date);
+					*/
+
+
+			// 6.编写班级随机点名小程序，程序运行在控制台输出一个学生的名字
+			/*
+			function myrandom(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			var NB = ['张三', '李四', '赵四', '刘能', '小沈阳', '宋小宝'];
+			// console.log(Math.random(NB));
+			// 调用函数,(索引号)
+			console.log(NB[myrandom(0, NB.length - 1)]);
+			*/
+
+
+
+
+
+
+
+
+			/*
+			7.编写函数计算从现在系统时间到用户输入的时间还有多少天，多少时，分，秒
+			
+			function countDown(){
+				//用户输入的时间对应的毫秒值
+				var time=+new Date(date)
+			}
+			*/
+			
+			
+			
+			
+			
+			
+			
+			/*
+			8.编写函数实现根据用户输入的日期返回该日期是周几
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			9.打印100(含)以内能被5整除的数字，每五个打印在一行
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			10.将字符串"name=zhangsan&age=25&sex=男" 中的值提取为" zhangsan  25  男"的形式
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			*/
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>文本拖拽</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.one {
+				position: absolute;
+				width: 150px;
+				height: 100px;
+				background-color: #7089FB;
+				text-align: center;
+				line-height: 100px;
+			}
+
+			.two {
+				/* position: absolute; */
+				width: 1000px;
+				height: 1000px;
+				border: 1px black solid;
+				/* margin: auto; */
+				margin-top: 100px;
+				margin-left: 500px;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="one">
+			<p>文本</p>
+		</div>
+
+		<div class="two"></div>
+
+		<script type="text/javascript">
+			const p = document.querySelector('.one')
+
+
+			// 鼠标按下  获取鼠标 在盒子内的坐标
+			p.addEventListener("mousedown", function(e) {
+				console.log("x坐标:" + e.pageX);
+				console.log("y坐标:" + e.pageY);
+				let x = e.pageX - p.offsetLeft
+				let y = e.pageY - p.offsetTop
+				// (2)::鼠标移动的时候, 把鼠标在页面中的坐标,减去 鼠标在盒子内的坐标就是模态框的left和top值
+				document.addEventListener('mousemove', stop)
+
+
+				function stop(e) {
+					p.style.left = e.pageX - x + "px";
+					p.style.top = e.pageY - y + "px";
+				}
+
+				// (3)::鼠标弹起, 就让鼠标移动时间移除
+				p.addEventListener("mouseup", function() {
+					document.removeEventListener("mousemove", stop);
+					// 鼠标弹起 创建一个新的div标签
+					insertNode()
+
+
+
+				})
+			})
+
+			// 节点创建
+			function insertNode() {
+				var ps = document.createElement('div')
+				var context = document.createTextNode("文本");
+				ps.className = 'one'
+				// var context = document.createElement("div");
+				ps.appendChild(context)
+				var two = document.querySelector(".two")
+				two.appendChild(ps, two.childNodes[0]);
+
+
+			}
+		</script>
+	</body>
+</html>

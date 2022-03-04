@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>案例 函数相互调用</title>
+
+		<script type="text/javascript">
+			//函数可以相互调用
+			function fn1() {
+				console.log(11);
+				fn2(); //在fn1 函数里面调用了 fn2 函数
+			}
+
+			function fn2() {
+				console.log(99);
+			}
+			fn1();
+
+					console.log('****************案例::函数调用的案例****************');
+
+					// 可以看到 函数调用的过程
+
+					function fn3() {
+						fn4(); //返回1.到这里了
+						console.log(11); //返回4. 打印fn3 11
+						console.log('fn1'); //返回5. 打印fn1
+					}
+
+					function fn4() {
+						console.log(99); //返回2. 打印fn4 99
+						console.log('fn2'); //返回3. 打印fn2
+					}
+					fn3(); //函数找到fn3开始返回
+
+
+					console.log('****************案例::函数 写闰年2月份的天数****************');
+
+					// 用户输入年份,输出当前年份2月份的天数
+
+					function run() {
+						var year = prompt('请你输入年份')
+						if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+							alert("闰年有2月有29天")
+						} else {
+
+							alert("平年有2月有28天")
+						}
+
+					}
+					run();
+					
+					
+					
+					
+					
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

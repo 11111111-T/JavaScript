@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>作业</title>
+
+		<script type="text/javascript" src="shuzu.js"> </script>
+		<!-- // 2.数组的排序 	 -->
+		<script type="text/javascript">
+			var num = prompt("请输入数组的长度")
+			num = num * 1;
+			var res = createArray(num);
+			console.log(res.toString());
+
+			// //将数组传入数组排序函数
+			res = arraySort(res);
+			console.log(res.toString());
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<script type="text/javascript">
+			/*
+			//1. (1)简易的加减乘除运算
+			
+		var num1=prompt("请输入第一个数");
+		num1=num1*1;
+		var num2=prompt("请输入第二个数");
+		num2=num2*1;
+		var yun=prompt("请输入运算符");
+		
+		
+			function jia(num1, num2) {
+				return num1 + num2;
+			}
+
+
+			function jian(num1, num2) {
+				return num1 - num2;
+			}
+
+			function cheng(num1, num2) {
+				return num1 * num2;
+			}
+
+			function chu(num1, num2) {
+				return num1 / num2;
+			}
+
+
+
+			switch(yun){
+				case '+':
+				alert(jia(num1,num2));
+				break;
+				
+				case '-':
+				alert(jian(num1, num2));
+				break;
+				
+				case '*':
+				alert(cheng(num1, num2));
+				break;
+				
+				case '/':
+				alert(chu(num1, num2));
+				break;
+				
+				
+				default:alert("请输入正确的运算符");
+				break;
+			}
+			
+			(2)
+			
+			
+			
+			
+			*/
+
+
+
+
+
+
+
+
+
+
+			console.log('*****************1..+n的结果***********************');
+
+			/*
+			2.编写函数实现1+2+3+4+5+....n的结果    
+			*/
+			// function sum(num) {
+			// 	var sum = 0;
+			// 	for (i = 0; i <= num; i++) {
+
+			// 		sum += i
+
+			// 	}
+			// 	return sum;
+			// }
+
+
+			function sum(num) { //递归
+				if (num == 1) {
+					return 1;
+				}
+				return num + sum(num - 1);
+			}
+
+			var res=sum(3);
+			console.log(res);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				console.log('*****************斐波那契***********************');
+
+			// 3.观察数列 1  1  2  3  5  8  13  21...... 编写函数计算第n项的值
+
+			function fb(index) {
+				if (index == 1 || index == 2) {
+					return 1;
+				}
+				return fb(index - 1) + fb(index - 2)
+			}
+
+			var res = fb(6);
+			console.log(res);
+		</script>
+
+	</head>
+	<body>
+
+
+
+
+
+		<!--<script type="text/javascript">
+			// 编写函数实现能创建x行y列的表格输出到页面
+
+			// function table(va1, va2) {
+			// 	var  str='';
+			// 	str += '<table border="1px" cellspacing="0" cellpadding="100%">';
+
+			// 	for (var i = 1; i <= va1; i++) {
+			// 		str += '<tr>'
+			// 		for (var j = 1; j <= va2; j++) {
+			// 			str += '<td>aa</td>'
+			// 		}
+			// 		str += '</tr>';
+			// 	}
+			// 	str += '</table>';
+			// 	return document.write(str)
+			// }
+			// table(5, 5);
+		</script>
+-->
+
+	</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>模拟数组api</title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			// find/filter/some/map/every/reduce
+
+
+			/*
+			// find()方法返回数组中满足提供的测试函数的第一个元素的值。否则返回undefined。
+			function fn(arr) {
+				const arrs = arr.find(index => index > 4);
+				console.log(arrs);
+			}
+			fn([1, 2, 6, 5, 4, 8, 9, 7])
+					
+					// find() 用对象的属性查找数组里的对象
+				var inventory = [
+				    {name: 'apples', quantity: 2},
+				    {name: 'bananas', quantity: 0},
+				    {name: 'cherries', quantity: 5}
+				];
+				
+				function findCherries(fruit) {
+				    return fruit.name === 'cherries';
+				}
+				
+				console.log(inventory.find(findCherries)); // { name: 'cherries', quantity: 5 }
+				*/
+
+
+
+			/*// filter()
+				// 第一个例子
+				const arr=['huren','huosai','lanwang','qishi','menglong']
+				const arrs=arr.filter(arr=>arr.length>5)
+				console.log(arrs); // (3) ["huosai", "lanwang", "menglong"]
+				
+				
+				
+				// 第二个例子
+				// const rr=[10,11,12,13,14,15,16,17,18,19,20]
+				// const rrs=rr.filter(rr=>rr>10) 
+			// console.log(rrs); //(10) [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+				
+				
+				第三个例子
+				function fns(rr){
+				return	rr >10
+				}
+				const rr=[10,11,12,13,14,15,16,17,18,19,20].filter(fns)
+				console.log(rr);  //(10) [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+				*/
+
+
+
+
+
+
+
+			/*// some()
+			some()方法测试数组中是不是至少有1个元素通过了被提供的函数测试。它返回的是一个Boolean类型的
+			*/
+
+			// const arr=[12,13,14,15,16]
+			// const ar=(element)=>element % 2==0
+			// console.log(arr.some(ar));
+
+
+
+			let a = [1, 2, 3]
+			
+			let a1 = a.some(function(ele, index, ary) {
+			
+				// console.log(ele); //值  1 2 3
+				// console.log(index);  //索引值  0 1 2
+				// console.log(ary); // (3) [1, 2, 3] 打印三次数组
+			});
+			
+			let a2 = a.every(function(ele, index, ary) {
+
+				// console.log(ele); //第一个值 1
+				// console.log(index); //第一个索引值 0
+				// console.log(ary);//(3) [1, 2, 3] 打印一次数组
+			});
+			
+			
+			
+			let a3 = a.map(function(ele, index, ary) {
+			
+				// console.log(ele); //值  1 2 3
+				// console.log(index); //索引值  0 1 2
+				// console.log(ary);// (3) [1, 2, 3] 打印三次数组
+			});
+			
+			
+			
+			let a4 = a.filter(function(ele, index, ary) {
+			
+				// console.log(ele); //值  1 2 3
+				// console.log(index); //索引值  0 1 2
+				// console.log(ary);// (3) [1, 2, 3] 打印三次数组
+			});
+			
+			let a5 = a.find(function(ele, index, ary) {
+			
+				// console.log(ele); //值  1 2 3
+				// console.log(index); //索引值  0 1 2
+				// console.log(ary);// (3) [1, 2, 3] 打印三次数组
+			});
+			
+			let a6 = a.reduce(function(ele, index, ary) {
+			
+				// console.log(ele); //值  1 2 3
+				// console.log(index); //索引值  0 1 2
+				// console.log(ary);// (3) [1, 2, 3] 打印三次数组
+			});
+			
+			
+			
+			
+			const arr=3
+			// const filled=Array(arr).fill(0)
+			
+			/*
+			// Array(length).fill({ value: 0 })创建一个 length 数组3，并为每个项目分配{ value: 0 }，要注意的是：分配相同的对象实例
+			const filled=Array(arr).fill({val:0})
+			*/
+			console.log(filled);
+			
+			
+		</script>
+
+	</body>
+</html>
